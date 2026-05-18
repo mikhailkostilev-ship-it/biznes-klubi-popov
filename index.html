@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Бизнес-сообщества Сбера · Итоги пилота · А.В. Попов</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;background:#0A0A0A;color:#fff;min-height:100vh;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:0;background:#0A0A0A}
+.bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(16,80,50,.3) 0%,transparent 70%)}
+.ib{position:fixed;top:0;left:0;height:3px;background:#22C55E;z-index:200;transition:width .5s;box-shadow:0 0 12px rgba(34,197,94,.4)}
+.nav{position:fixed;top:3px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 48px;background:rgba(10,10,10,.5);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nt{font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.nc{font-size:12px;color:rgba(255,255,255,.35);font-variant-numeric:tabular-nums}
+.nd{display:flex;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.1);cursor:pointer;transition:all .4s}
+.dot.a{background:#22C55E;width:24px;border-radius:3px;box-shadow:0 0 12px rgba(34,197,94,.3)}
+
+.SS{position:relative;z-index:1;padding:60px 48px 80px;max-width:1200px;margin:0 auto;min-height:100vh;display:flex;align-items:center}
+.S{display:none;width:100%;animation:fi .5s}
+.S.a{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+.lb{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#22C55E;margin-bottom:12px;font-weight:600}
+.tt{font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.05;margin-bottom:14px;letter-spacing:-.03em;max-width:920px}
+.tt .g{color:#22C55E}
+.tt-sub{font-size:13px;line-height:1.55;color:rgba(255,255,255,.5);margin-bottom:24px;max-width:840px}
+.tt-sub strong{color:#fff;font-weight:600}
+
+.sp{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.sp-13{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:start}
+
+.ctr{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;justify-content:center;gap:10px;padding:16px;background:linear-gradient(transparent,rgba(10,10,10,.95) 40%)}
+.btn{padding:9px 22px;border-radius:10px;font-size:12px;font-weight:600;cursor:pointer;transition:all .3s;border:none}
+.bp{background:rgba(255,255,255,.06);color:rgba(255,255,255,.4)}
+.bp:hover{background:rgba(255,255,255,.12);color:#fff}
+.bn{background:#22C55E;color:#0A0A0A}
+.bn:hover{background:#4ADE80;box-shadow:0 4px 16px rgba(34,197,94,.3)}
+
+.eb{font-size:11px;color:rgba(34,197,94,.7);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:8px}
+.eb.w{color:rgba(255,255,255,.35)}
+
+/* ─── 1 COVER ─── */
+.agenda{display:flex;flex-direction:column;gap:14px;max-width:720px}
+.ag-row{display:flex;align-items:baseline;gap:18px}
+.ag-num{font-size:32px;font-weight:800;color:#22C55E;min-width:42px;line-height:1;letter-spacing:-.02em}
+.ag-name{font-size:20px;font-weight:600;color:rgba(255,255,255,.85);line-height:1.2}
+.ag-desc{font-size:12px;color:rgba(255,255,255,.4);margin-top:3px;line-height:1.45}
+
+/* ─── 2 ОБЕЩАЛИ — Apple style ─── */
+.con-row{display:grid;grid-template-columns:1fr auto 2.1fr;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05);align-items:center}
+.con-row:last-of-type{border-bottom:0}
+.con-was{display:flex;flex-direction:column;gap:4px}
+.con-was-cap{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1.8px;font-weight:600}
+.con-was-sub{font-size:12px;color:rgba(255,255,255,.35);line-height:1.35;font-weight:400}
+.con-arr{font-size:14px;color:rgba(255,255,255,.18);font-weight:300}
+.con-now{display:flex;flex-direction:column;gap:5px}
+.con-now-t{font-size:18px;font-weight:700;color:#fff;line-height:1.25;letter-spacing:-.01em;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.bul-list{display:flex;flex-direction:column;gap:7px}
+.bul-item{display:flex;flex-direction:column;gap:1px}
+.bul-head{font-size:17px;font-weight:700;color:#fff;line-height:1.25;letter-spacing:-.01em;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.bul-head .g{color:#22C55E}
+.bul-head .a{color:#F0C040}
+.bul-head small{font-size:12px;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:0}
+.bul-sub{font-size:10.5px;color:rgba(255,255,255,.4);line-height:1.5;letter-spacing:.1px}
+.badge-soon{display:inline-block;font-size:9px;font-weight:700;color:rgba(34,197,94,.95);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);border-radius:3px;padding:2px 7px;text-transform:uppercase;letter-spacing:1px;margin-left:8px;vertical-align:middle}
+.con-now-t .g{color:#22C55E}
+.con-now-t .a{color:#F0C040}
+.con-now-t small{font-size:13px;color:rgba(255,255,255,.45);font-weight:500;letter-spacing:0}
+.con-now-chip{display:inline-flex;align-items:center;gap:5px;font-size:9px;color:rgba(240,192,64,.9);background:rgba(240,192,64,.08);border:1px solid rgba(240,192,64,.28);border-radius:4px;padding:2px 6px;font-weight:600;text-transform:uppercase;letter-spacing:.6px}
+.con-now-chip .dt{width:5px;height:5px;border-radius:50%;background:#F0C040}
+.con-now-chip.g{color:#22C55E;background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.28)}
+.con-now-chip.g .dt{background:#22C55E}
+.con-now-d{font-size:11px;color:rgba(255,255,255,.5);line-height:1.55}
+.con-now-d strong{color:rgba(255,255,255,.85);font-weight:600}
+.con-now-d em{color:rgba(34,197,94,.85);font-style:normal;font-weight:600}
+
+.con-row.kpi-row{border:1px solid rgba(240,192,64,.28);background:rgba(240,192,64,.04);border-radius:10px;padding:11px 18px;margin-top:10px;margin-left:-18px;margin-right:-18px;border-bottom:1px solid rgba(240,192,64,.28)}
+.con-row.kpi-row .con-was-cap{color:rgba(240,192,64,.9)}
+.con-row.kpi-row .con-arr{color:rgba(240,192,64,.3)}
+.gold-strip{background:rgba(240,192,64,.05);border:1px solid rgba(240,192,64,.22);border-radius:10px;padding:13px 0;margin-top:14px;display:grid;grid-template-columns:1fr auto 1.4fr;gap:18px;align-items:center}
+.gold-tag{font-size:10px;color:rgba(240,192,64,.9);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;padding:3px 8px;background:rgba(240,192,64,.1);border:1px solid rgba(240,192,64,.3);border-radius:4px;margin-left:18px;justify-self:start}
+.gold-right{display:flex;align-items:center;gap:14px;padding-right:18px}
+.gold-text{font-size:12px;color:rgba(255,255,255,.75);line-height:1.55}
+.gold-text strong{color:#fff;font-weight:600}
+.gold-text .num{font-variant-numeric:tabular-nums;font-weight:700;color:#22C55E}
+.gold-text .num-a{font-variant-numeric:tabular-nums;font-weight:700;color:#F0C040}
+.gold-link{font-size:10px;color:#22C55E;font-weight:600;text-decoration:none;border-bottom:1px dashed rgba(34,197,94,.4);padding-bottom:1px;white-space:nowrap;cursor:pointer}
+.gold-link:hover{color:#4ADE80}
+.con-row{padding:11px 0}
+
+/* ─── 3 ОБЪЁМ ─── */
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.dash-side{display:flex;flex-direction:column;gap:14px}
+.dash-side-h{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:4px}
+.dash-side-h.g{color:#22C55E}
+.dash-side-h.r{color:#EF4444}
+
+.dash-row{display:flex;align-items:baseline;gap:14px}
+.dash-num{font-size:clamp(40px,6vw,56px);font-weight:800;line-height:1;letter-spacing:-.03em;min-width:120px}
+.dash-num.g{color:#22C55E}
+.dash-num.r{color:#EF4444}
+.dash-num.w{color:#fff}
+.dash-lab{font-size:13px;color:rgba(255,255,255,.5);line-height:1.4}
+.dash-lab strong{color:#fff;font-weight:600}
+
+.dash-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)}
+.dash-mini-c{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px 12px;text-align:center}
+.dash-mini-v{font-size:18px;font-weight:800;color:rgba(255,255,255,.85);line-height:1;letter-spacing:-.02em}
+.dash-mini-v.g{color:#22C55E}
+.dash-mini-l{font-size:10px;color:rgba(255,255,255,.4);margin-top:4px;line-height:1.35}
+
+.dash-side .item{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:8px 0}
+.dash-side .item-bullet{font-size:14px;font-weight:700;line-height:1.3;width:18px}
+.dash-side .item-bullet.v{color:#22C55E}
+.dash-side .item-bullet.x{color:#EF4444}
+.dash-side .item-text{font-size:12px;color:rgba(255,255,255,.65);line-height:1.55}
+.dash-side .item-text strong{color:#fff;font-weight:600}
+
+/* ─── 4 УРОКИ ─── */
+.lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.les-col{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column}
+.les-col.win{border-color:rgba(34,197,94,.2);background:rgba(34,197,94,.03)}
+.les-col.fail{border-color:rgba(239,68,68,.15);background:rgba(239,68,68,.03)}
+.les-col.find{border-color:rgba(125,153,255,.22);background:rgba(125,153,255,.04)}
+.les-h{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:14px}
+.les-col.win .les-h{color:#22C55E}
+.les-col.fail .les-h{color:#EF4444}
+.les-col.find .les-h{color:#7D99FF}
+.bul-l{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
+.bul-l li{font-size:12px;line-height:1.5;color:rgba(255,255,255,.7);display:grid;grid-template-columns:14px 1fr;gap:6px;align-items:start}
+.bul-l li.v::before{content:'✓';color:#22C55E;font-weight:700;font-size:12px;line-height:1.4}
+.bul-l li.x::before{content:'✗';color:#EF4444;font-weight:700;font-size:12px;line-height:1.4}
+.bul-l li.h::before{content:'→';color:#7D99FF;font-weight:700;font-size:12px;line-height:1.4}
+.bul-l li strong{color:#fff;font-weight:600}
+
+/* ─── 5 МОДЕЛЬ ─── */
+.model-frame{position:relative;background:rgba(240,192,64,.025);border:1px dashed rgba(240,192,64,.25);border-radius:14px;padding:30px 24px 16px;margin-top:22px}
+.model-frame-tag{position:absolute;top:-9px;left:24px;background:#0A0A0A;padding:0 12px;font-size:10px;color:#F0C040;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+.prog{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:stretch}
+.prog-st{padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;flex-direction:column;gap:8px}
+.prog-st.now{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)}
+.prog-st.tgt{background:rgba(34,197,94,.07);border-color:rgba(34,197,94,.3)}
+.prog-lab{font-size:9px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.prog-st.tgt .prog-lab{color:#22C55E}
+.prog-name{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.1}
+.prog-st.tgt .prog-name{color:#22C55E}
+.prog-block{display:flex;flex-direction:column;gap:2px;padding-top:6px;border-top:1px solid rgba(255,255,255,.05)}
+.prog-bl-l{font-size:9px;color:rgba(255,255,255,.4);text-transform:none;letter-spacing:.3px;font-weight:600}
+.prog-bl-t{font-size:11px;color:rgba(255,255,255,.65);line-height:1.4}
+.prog-st.tgt .prog-bl-t{color:rgba(255,255,255,.85)}
+.prog-arr{display:flex;align-items:center;padding:0 8px;color:rgba(34,197,94,.5);font-size:14px}
+
+.tline{position:relative;margin:20px 0 4px}
+.tline-bar{height:5px;background:rgba(255,255,255,.04);border-radius:3px;position:relative;overflow:visible}
+.tline-fill{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,#22C55E,rgba(34,197,94,.3));border-radius:3px}
+.tline-dot{position:absolute;top:-3px;width:11px;height:11px;border-radius:50%;background:#22C55E;box-shadow:0 0 12px rgba(34,197,94,.5)}
+.tline-targ{position:absolute;top:0;height:100%;background:rgba(34,197,94,.1);border-radius:3px;border:1px dashed rgba(34,197,94,.25)}
+.tline-labs{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:rgba(255,255,255,.4)}
+.tline-labs .g{color:#22C55E;font-weight:600}
+
+.model-meta{margin-top:14px;font-size:12px;color:rgba(255,255,255,.55);line-height:1.6;text-align:center}
+.model-meta strong{color:#fff;font-weight:600}
+.model-meta em{color:#22C55E;font-style:normal;font-weight:600}
+
+/* ─── 6 ГОЛОС ─── */
+.voc3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.voc-c{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.voc-c.deal{background:rgba(34,197,94,.04);border-color:rgba(34,197,94,.18)}
+.voc-tag{display:inline-flex;align-items:center;gap:6px;font-size:9px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.8px;font-weight:700;width:fit-content;padding:3px 8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:5px}
+.voc-tag .d{width:5px;height:5px;border-radius:50%;background:#22C55E}
+.voc-c.deal .voc-tag{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.25);color:rgba(34,197,94,.9)}
+
+.voc-h{font-size:16px;font-weight:700;color:#fff;line-height:1.25;letter-spacing:-.01em}
+.voc-c.deal .voc-h{color:#22C55E}
+
+.voc-row{display:grid;grid-template-columns:74px 1fr;gap:8px;align-items:start;font-size:11px;line-height:1.5}
+.voc-l{font-size:8px;color:rgba(34,197,94,.7);text-transform:uppercase;letter-spacing:1px;font-weight:700;padding-top:1px}
+.voc-t{color:rgba(255,255,255,.65)}
+.voc-t strong{color:#fff;font-weight:600}
+
+.voc-quote{background:rgba(34,197,94,.04);border-left:2px solid rgba(34,197,94,.5);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:auto}
+.voc-quote-t{font-size:11px;font-style:italic;color:rgba(255,255,255,.6);line-height:1.5}
+.voc-quote-t strong{color:#fff;font-style:normal;font-weight:600}
+.voc-quote-a{font-size:9px;color:rgba(255,255,255,.4);margin-top:5px;text-transform:uppercase;letter-spacing:.8px}
+
+.voc-foot-band{margin-top:14px;padding:10px 14px;background:rgba(255,255,255,.02);border-left:2px solid rgba(255,255,255,.15);border-radius:0 8px 8px 0;font-size:12px;color:rgba(255,255,255,.55);line-height:1.55;font-style:italic}
+.voc-foot-band strong{color:#fff;font-style:normal;font-weight:600}
+.av-c{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,rgba(34,197,94,.22),rgba(34,197,94,.06));border:1.5px solid rgba(34,197,94,.35);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:rgba(255,255,255,.92);letter-spacing:.5px;flex-shrink:0;overflow:hidden;box-shadow:0 4px 12px -4px rgba(0,0,0,.4)}
+.av-c img{width:100%;height:100%;object-fit:cover;display:block}
+.av-c.ph{background:#0A0A0A;border-color:rgba(34,197,94,.45)}
+.av-grp{display:flex;flex-shrink:0}
+.av-grp .av-c{width:44px;height:44px;font-size:13px;margin-left:-14px;border-width:2px;border-color:rgba(34,197,94,.4)}
+.av-grp .av-c:first-child{margin-left:0}
+
+/* ─── 7 CEO-КЛУБ ─── */
+.ceo-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center}
+.ceo-date{font-size:clamp(48px,7vw,72px);font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.03em;margin-bottom:4px}
+.ceo-loc{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:20px}
+.ceo-keynums{display:flex;gap:24px;margin-bottom:18px}
+.ceo-kn{display:flex;flex-direction:column;gap:2px}
+.ceo-kn-v{font-size:clamp(28px,4vw,42px);font-weight:800;color:#fff;line-height:1}
+.ceo-kn-l{font-size:11px;color:rgba(255,255,255,.3);margin-top:2px}
+.ceo-desc{font-size:12px;color:rgba(255,255,255,.4);line-height:1.6;margin-bottom:14px}
+.ceo-pill{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);border-radius:8px;padding:9px 13px;font-size:12px;color:rgba(34,197,94,.8);display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.ceo-pill .star{font-size:13px;color:#22C55E}
+.ceo-day{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 16px;margin-bottom:8px}
+.ceo-day-h{font-size:11px;font-weight:700;color:#22C55E;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.ceo-day-c{font-size:11px;color:rgba(255,255,255,.45);line-height:1.65}
+.ceo-day-c strong{color:rgba(255,255,255,.75);font-weight:600}
+.ceo-roadmap{display:flex;gap:6px;margin-top:12px}
+.ceo-rm{flex:1;background:rgba(255,255,255,.03);border-radius:7px;padding:9px;text-align:center}
+.ceo-rm.now{background:rgba(34,197,94,.1)}
+.ceo-rm-mo{font-size:9px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.5px}
+.ceo-rm.now .ceo-rm-mo{color:#22C55E}
+.ceo-rm-loc{font-size:10px;font-weight:600;color:rgba(255,255,255,.5);margin-top:2px}
+.ceo-rm-d{font-size:9px;color:rgba(255,255,255,.25);margin-top:2px}
+
+/* ─── 8 ИНСТРУМЕНТ ─── */
+.tool-traits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.tool-tr{background:rgba(240,192,64,.05);border:1px solid rgba(240,192,64,.2);border-radius:14px;padding:18px 20px;position:relative}
+.tool-tr-n{font-size:11px;color:rgba(240,192,64,.85);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px}
+.tool-tr-v{font-size:32px;font-weight:800;color:#F0C040;line-height:1;letter-spacing:-.02em;margin-bottom:6px}
+.tool-tr-h{font-size:14px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:6px}
+.tool-tr-d{font-size:11px;color:rgba(255,255,255,.6);line-height:1.55}
+.tool-tr-d strong{color:#fff;font-weight:600}
+
+.apps{display:flex;flex-direction:column;gap:8px}
+.app{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 16px;display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.app-n{font-size:20px;font-weight:800;color:#22C55E;line-height:1}
+.app-h{font-size:13px;font-weight:600;color:#fff;line-height:1.3;margin-bottom:4px}
+.app-t{font-size:11px;color:rgba(255,255,255,.6);line-height:1.55}
+.app-t strong{color:#fff;font-weight:600}
+
+/* ─── 9 ИНИЦИАТИВЫ + ПОДДЕРЖКА ─── */
+.init-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.init-sect{display:flex;flex-direction:column;gap:8px}
+.init-sect-h{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#22C55E;margin-bottom:4px;font-weight:700}
+.init-sect-h.w{color:rgba(255,255,255,.35)}
+
+.init{background:rgba(34,197,94,.04);border:1px solid rgba(34,197,94,.12);border-radius:10px;padding:11px 16px}
+.init.soon{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.06)}
+.init-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.init-name{font-size:13px;font-weight:600;color:rgba(255,255,255,.85)}
+.init.soon .init-name{color:rgba(255,255,255,.5)}
+.init-status{font-size:10px;font-weight:700;color:#22C55E}
+.init.soon .init-status{color:rgba(255,255,255,.3)}
+.init-bar{height:3px;background:rgba(255,255,255,.04);border-radius:2px;margin-bottom:5px;overflow:hidden}
+.init-bar-fill{height:100%;background:#22C55E;border-radius:2px}
+.init.soon .init-bar-fill{background:rgba(255,255,255,.25);width:5%}
+.init-desc{font-size:10px;color:rgba(255,255,255,.4);line-height:1.4}
+
+.supp-block{margin-top:14px;background:rgba(34,197,94,.04);border:1px solid rgba(34,197,94,.18);border-radius:12px;padding:16px 20px}
+.supp-h{font-size:13px;font-weight:700;color:#fff;margin-bottom:10px}
+.supp-h .g{color:#22C55E}
+.supp-items{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.supp-it{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;font-size:11px;line-height:1.55;color:rgba(255,255,255,.75)}
+.supp-it-n{font-size:11px;font-weight:700;color:#22C55E;margin-top:1px}
+.supp-it strong{color:#fff;font-weight:600}
+.supp-foot{margin-top:12px;padding-top:10px;border-top:1px solid rgba(34,197,94,.15);font-size:10px;color:rgba(255,255,255,.5);line-height:1.55}
+.supp-foot strong{color:#fff;font-weight:600}
+
+/* ─── divider ─── */
+.divtitle{font-size:clamp(36px,5vw,64px);font-weight:800;color:#22C55E;text-align:center;letter-spacing:-.03em}
+.divsub{font-size:11px;color:rgba(255,255,255,.35);text-align:center;text-transform:uppercase;letter-spacing:3px;margin-top:12px;font-weight:600}
+
+/* ─── B1 БИЗНЕС-КЕЙС с гистограммой ─── */
+.bc-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-bottom:14px}
+.bc-bars{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px 20px}
+.bc-bars-h{font-size:11px;color:rgba(34,197,94,.7);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:14px}
+.bc-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bc-yr{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;min-width:36px}
+.bc-bar-track{flex:1;height:24px;background:rgba(255,255,255,.04);border-radius:4px;overflow:hidden;display:flex}
+.bc-bar-kib{background:rgba(34,197,94,.7);height:100%;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:700;color:#0A0A0A}
+.bc-bar-mkt{background:rgba(240,192,64,.7);height:100%;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:700;color:#0A0A0A}
+.bc-bar-val{font-size:13px;font-weight:700;color:#fff;min-width:60px;text-align:right;font-variant-numeric:tabular-nums}
+.bc-legend{display:flex;gap:16px;margin-top:12px;font-size:10px;color:rgba(255,255,255,.5)}
+.bc-leg-d{display:flex;align-items:center;gap:6px}
+.bc-leg-d .sw{width:10px;height:10px;border-radius:2px}
+
+.bc-metrics{display:flex;flex-direction:column;gap:10px}
+.bc-metric{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:12px 16px}
+.bc-metric-v{font-size:24px;font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em}
+.bc-metric-v small{font-size:13px;color:rgba(255,255,255,.4);font-weight:500}
+.bc-metric-l{font-size:11px;color:rgba(255,255,255,.5);margin-top:4px}
+
+.bc-pnl-mini{width:100%;border-collapse:collapse;font-size:11px}
+.bc-pnl-mini th{padding:6px 8px;text-align:right;font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.35);font-weight:600;border-bottom:1px solid rgba(255,255,255,.1)}
+.bc-pnl-mini th:first-child{text-align:left}
+.bc-pnl-mini td{padding:5px 8px;text-align:right;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.04);font-variant-numeric:tabular-nums}
+.bc-pnl-mini td:first-child{text-align:left;color:rgba(255,255,255,.75)}
+.bc-pnl-mini .g{color:#22C55E;font-weight:700}
+.bc-pnl-mini tr.t td{font-weight:700;color:#fff;border-bottom:0;padding-top:8px}
+
+/* ─── B2 СЦЕНАРИИ — переработка ─── */
+.scn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.scn-c{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.scn-c.base{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.04)}
+.scn-c.base::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#22C55E}
+.scn-c.amb{border-color:rgba(240,192,64,.25);background:rgba(240,192,64,.02)}
+.scn-c.amb::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:rgba(240,192,64,.5)}
+.scn-tag{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:6px;color:rgba(255,255,255,.4)}
+.scn-c.base .scn-tag{color:#22C55E}
+.scn-c.amb .scn-tag{color:rgba(240,192,64,.85)}
+.scn-name{font-size:18px;font-weight:700;color:#fff;margin-bottom:3px;letter-spacing:-.02em;line-height:1.15}
+.scn-rev{font-size:28px;font-weight:800;color:rgba(255,255,255,.85);margin-bottom:12px;letter-spacing:-.02em}
+.scn-c.base .scn-rev{color:#22C55E}
+.scn-rev small{font-size:13px;color:rgba(255,255,255,.4);font-weight:500}
+
+.scn-do{padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:10px}
+.scn-do-h{font-size:9px;color:#22C55E;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px}
+.scn-c.amb .scn-do-h{color:rgba(240,192,64,.85)}
+.scn-do-l{font-size:11px;color:rgba(255,255,255,.7);line-height:1.55;padding-left:12px;position:relative;margin-bottom:3px}
+.scn-do-l::before{content:'';position:absolute;left:0;top:7px;width:5px;height:1px;background:#22C55E}
+.scn-do-l strong{color:#fff;font-weight:600}
+
+.scn-not-h{font-size:9px;color:rgba(239,68,68,.7);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px}
+.scn-not-l{font-size:11px;color:rgba(255,255,255,.45);line-height:1.5;padding-left:12px;position:relative;margin-bottom:3px}
+.scn-not-l::before{content:'×';position:absolute;left:0;top:0;color:rgba(239,68,68,.5);font-weight:700;font-size:11px}
+
+.scn-purpose{margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.06);font-size:10px;color:rgba(34,197,94,.85);line-height:1.5;font-style:italic}
+.scn-c.amb .scn-purpose{color:rgba(240,192,64,.8)}
+
+/* ─── B3 СО.Действие архитектура ─── */
+.arch3{display:grid;grid-template-columns:.9fr 1fr .95fr;gap:14px;margin:14px 0 8px}
+.arch3-col{display:flex;flex-direction:column}
+.arch3-h{font-size:10px;font-weight:700;color:#22C55E;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:3px}
+.arch3-sh{font-size:9px;color:rgba(255,255,255,.3);line-height:1.4;margin-bottom:8px}
+.arch3-sub{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.6px;margin:8px 0 3px;font-weight:600}
+.arch3-ul{list-style:none;padding:0}
+.arch3-ul li{font-size:11px;line-height:1.5;color:rgba(255,255,255,.5);padding:2px 0;display:flex;gap:6px;align-items:baseline}
+.arch3-ul li::before{content:'•';color:#22C55E;opacity:.55}
+.arch3-ul li.on{color:rgba(255,255,255,.85);font-weight:600}
+.arch3-ul li.on::before{opacity:1}
+
+.arch3-meta{font-size:11px;color:rgba(255,255,255,.5);line-height:1.55}
+.arch3-meta .k{color:#fff;font-weight:600;display:block;margin-top:6px}
+
+.arch3-roles{margin:10px 0 6px;padding:14px;background:rgba(34,197,94,.04);border:1px solid rgba(34,197,94,.12);border-radius:12px}
+.arch3-mtx{display:flex;gap:6px;margin-top:8px}
+.arch3-mc{padding:10px 8px;border-radius:8px;text-align:center}
+.arch3-mc .rn{font-size:13px;font-weight:700;color:#fff}
+.arch3-mc .rp{font-size:10px;color:rgba(255,255,255,.55);margin-top:2px}
+.arch3-mc-1{flex:.9;background:rgba(34,197,94,.32)}
+.arch3-mc-2{flex:1.3;background:rgba(34,197,94,.2)}
+.arch3-mc-3{flex:2.1;background:rgba(34,197,94,.1)}
+
+.arch3-pkg{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}
+.arch3-pkg th{padding:7px 8px;font-weight:600;text-align:center;border-bottom:1px solid rgba(255,255,255,.12);font-size:12px}
+.arch3-pkg th.l{text-align:left;color:rgba(255,255,255,.35);font-size:9px;text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+.arch3-pkg th.ceo{color:#22C55E}
+.arch3-pkg td{padding:5px 8px;text-align:center;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.04)}
+.arch3-pkg td.l{text-align:left;color:rgba(255,255,255,.7)}
+.arch3-pkg td.num{color:#fff;font-weight:700;font-size:13px}
+.arch3-pkg td.dash{color:rgba(255,255,255,.18)}
+.arch3-pkg tr.t td{background:rgba(34,197,94,.05);border-top:1px solid rgba(34,197,94,.25);border-bottom:none;font-weight:700;padding-top:8px}
+.arch3-pkg tr.t td.l{color:#fff}
+.arch3-pkg tr.t td.big{color:#22C55E;font-size:16px;font-weight:800}
+.arch3-pkg tr.p td{background:rgba(34,197,94,.03);font-size:10px;padding-top:2px;padding-bottom:8px;border-bottom:none}
+.arch3-pkg tr.p td.l{color:rgba(255,255,255,.4)}
+
+/* ─── B4 ГигаАкадемия ─── */
+.giga-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.giga-block{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px 20px}
+.giga-h{font-size:11px;color:rgba(34,197,94,.7);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px}
+.giga-num{font-size:32px;font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em;margin-bottom:4px}
+.giga-num small{font-size:14px;color:rgba(255,255,255,.4);font-weight:500}
+.giga-text{font-size:12px;color:rgba(255,255,255,.6);line-height:1.55;margin-top:8px}
+.giga-text strong{color:#fff;font-weight:600}
+
+/* ─── B5 КАЛЕНДАРЬ ─── */
+.cal-hero{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.25);border-radius:12px;padding:18px 22px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;margin-bottom:8px}
+.cal-date{font-size:28px;font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em}
+.cal-date small{font-size:13px;color:rgba(255,255,255,.5);font-weight:500;display:block;margin-top:2px}
+.cal-mid-tag{font-size:9px;color:#22C55E;text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+.cal-mid-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:-.01em;margin-top:2px}
+.cal-mid-meta{font-size:11px;color:rgba(255,255,255,.5);margin-top:2px}
+.cal-stat-v{font-size:20px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1}
+.cal-stat-l{font-size:10px;color:rgba(255,255,255,.4);text-align:right;margin-top:2px}
+
+.cal-reg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.cal-r{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:12px 14px}
+.cal-r-h{font-size:12px;font-weight:700;color:#fff;margin-bottom:8px}
+.cal-r-ev{font-size:11px;color:rgba(255,255,255,.55);line-height:1.5;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04);display:grid;grid-template-columns:42px 1fr;gap:6px}
+.cal-r-ev:last-child{border-bottom:0}
+.cal-r-d{font-family:monospace;font-size:10px;color:#22C55E;font-weight:600}
+.cal-r-ev strong{color:#fff;font-weight:600}
+
+/* ─── B6 ЗРЕЛОСТЬ ─── */
+.maturity{display:flex;flex-direction:column;gap:5px;margin-top:12px}
+.mat-l{display:flex;align-items:center;gap:12px;padding:11px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.mat-l.here{background:rgba(34,197,94,.06);border-color:rgba(34,197,94,.2)}
+.mat-l.tgt{background:rgba(34,197,94,.04);border:1px dashed rgba(34,197,94,.3)}
+.mat-l.dream{background:linear-gradient(135deg,rgba(237,161,0,.06),rgba(237,161,0,.02));border:1px solid rgba(237,161,0,.2)}
+.mat-n{font-size:24px;font-weight:800;color:rgba(255,255,255,.2);min-width:30px}
+.mat-l.here .mat-n{color:#22C55E}
+.mat-l.tgt .mat-n{color:rgba(34,197,94,.5)}
+.mat-l.dream .mat-n{color:rgba(237,161,0,.6)}
+.mat-body{flex:1}
+.mat-name{font-size:13px;font-weight:600;color:rgba(255,255,255,.6)}
+.mat-l.here .mat-name{color:#fff}
+.mat-l.dream .mat-name{color:rgba(237,161,0,.7)}
+.mat-desc{font-size:10px;color:rgba(255,255,255,.25);margin-top:2px;line-height:1.45}
+.mat-sber{font-size:10px;color:rgba(34,197,94,.4);margin-top:3px;line-height:1.4}
+.mat-l.dream .mat-sber{color:rgba(237,161,0,.4)}
+.mat-badge{font-size:8px;font-weight:700;padding:3px 7px;border-radius:4px;background:rgba(34,197,94,.15);color:#22C55E;white-space:nowrap}
+.mat-l.tgt .mat-badge{background:rgba(34,197,94,.05);color:rgba(34,197,94,.4);border:1px dashed rgba(34,197,94,.15)}
+.mat-l.dream .mat-badge{background:rgba(237,161,0,.12);color:rgba(237,161,0,.7)}
+.mat-l:not(.here):not(.tgt):not(.dream) .mat-badge{background:rgba(255,255,255,.03);color:rgba(255,255,255,.3)}
+
+/* ─── 2 slide redesign ─── */
+.hero-perim{display:grid;grid-template-columns:.85fr auto 1.5fr;gap:24px;align-items:center;padding:22px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:18px}
+.hero-perim-left{display:flex;flex-direction:column;gap:8px}
+.hero-was-h{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1.8px;font-weight:600}
+.hero-was{font-size:15px;color:rgba(255,255,255,.5);line-height:1.45;font-weight:500}
+.hero-perim-arrow{font-size:22px;color:rgba(34,197,94,.4);font-weight:300}
+.hero-perim-right{display:flex;flex-direction:column;gap:14px}
+.hero-num-row{display:flex;align-items:baseline;gap:18px}
+.hero-num{font-size:clamp(40px,5vw,52px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff;min-width:155px;font-variant-numeric:tabular-nums}
+.hero-num .g{color:#22C55E}
+.hero-num.g{color:#22C55E}
+.hero-of{font-size:18px;color:rgba(255,255,255,.4);font-weight:500;margin-left:8px}
+.hero-num-lab{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55;flex:1}
+.hero-num-lab strong{color:#fff;font-weight:600}
+
+.dual-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.dual-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px 20px;display:flex;flex-direction:column}
+.dual-card-h{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.8px;font-weight:600;margin-bottom:14px}
+.dual-card-d{font-size:11px;color:rgba(255,255,255,.55);line-height:1.55;margin-top:auto;padding-top:12px}
+.dual-card-d strong{color:#fff;font-weight:600}
+
+.dual-timeline{display:flex;align-items:center;gap:14px;margin:2px 0}
+.tl-point{display:flex;flex-direction:column;gap:3px;flex:1}
+.tl-date{font-size:14px;font-weight:700;color:rgba(255,255,255,.65);font-variant-numeric:tabular-nums}
+.tl-point.tgt .tl-date{color:#22C55E}
+.tl-name{font-size:11px;color:rgba(255,255,255,.45);line-height:1.4}
+.tl-arrow{font-size:14px;color:rgba(34,197,94,.45);font-weight:300}
+
+.big-stat-9{font-size:46px;font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:10px;margin:2px 0}
+.big-stat-9 .num{color:#22C55E}
+.big-stat-9 .lab{font-size:14px;color:rgba(255,255,255,.55);font-weight:500;letter-spacing:0}
+
+.kpi-strip{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;align-items:center}
+.kpi-dot{width:8px;height:8px;border-radius:50%;background:#22C55E;flex-shrink:0;box-shadow:0 0 10px rgba(34,197,94,.5)}
+.kpi-text{font-size:12px;color:rgba(255,255,255,.7);line-height:1.55}
+.kpi-text strong{color:#fff;font-weight:600}
+
+/* ─── 2 slide v3 (data redesign) ─── */
+.perim-row{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;padding:14px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:12px}
+.perim-left{display:flex;flex-direction:column;gap:6px;min-width:180px}
+.perim-cap{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.8px;font-weight:600}
+.perim-was{font-size:14px;color:rgba(255,255,255,.55);line-height:1.45}
+.perim-now-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.perim-now-big{font-size:clamp(36px,4.5vw,46px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#22C55E}
+.perim-now-arr{font-size:18px;color:rgba(34,197,94,.4)}
+.perim-now-sm{font-size:16px;color:rgba(255,255,255,.5);font-weight:500}
+.perim-now-sm strong{color:#fff;font-weight:600}
+.perim-segs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.perim-seg{padding:8px 12px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;font-size:11px;color:rgba(255,255,255,.55);line-height:1.5}
+.perim-seg-h{font-size:9px;color:rgba(34,197,94,.7);text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin-bottom:3px}
+.perim-seg strong{color:#fff;font-weight:600}
+.perim-seg em{font-style:normal;color:rgba(255,255,255,.35);font-size:10px}
+.perim-tb{font-size:10px;color:rgba(255,255,255,.45);margin-top:6px;line-height:1.5}
+.perim-tb strong{color:#fff;font-weight:600}
+
+.num-row-2{display:grid;grid-template-columns:1fr 1.1fr;gap:12px;margin-bottom:12px}
+.num-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 18px;position:relative}
+.num-card.amber{border-color:rgba(240,192,64,.22);background:rgba(240,192,64,.04)}
+.num-card.green{border-color:rgba(34,197,94,.22);background:rgba(34,197,94,.04)}
+.num-card-h{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.8px;font-weight:600;margin-bottom:8px}
+.num-card.amber .num-card-h{color:rgba(240,192,64,.85)}
+.num-card.green .num-card-h{color:#22C55E}
+.num-big-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.num-big{font-size:clamp(36px,4.8vw,52px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff;font-variant-numeric:tabular-nums}
+.num-card.amber .num-big{color:#F0C040}
+.num-card.green .num-big{color:#22C55E}
+.num-big-plan{font-size:16px;color:rgba(255,255,255,.45);font-weight:500}
+.num-big-pct{font-size:12px;color:rgba(255,255,255,.55);font-weight:600;padding:3px 8px;background:rgba(255,255,255,.05);border-radius:4px;font-family:monospace}
+.num-card.amber .num-big-pct{color:#F0C040;background:rgba(240,192,64,.1)}
+.num-card.green .num-big-pct{color:#22C55E;background:rgba(34,197,94,.1)}
+.num-sub{font-size:11px;color:rgba(255,255,255,.45);line-height:1.5;margin-top:8px}
+.num-sub strong{color:rgba(255,255,255,.75);font-weight:600}
+
+.kpi-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(34,197,94,.12)}
+.kpi-bd{text-align:center}
+.kpi-bd-v{font-size:18px;font-weight:700;color:rgba(255,255,255,.9);line-height:1;font-variant-numeric:tabular-nums}
+.kpi-bd-l{font-size:9px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;font-weight:600;margin-top:4px}
+.kpi-bd-p{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;font-family:monospace}
+
+.num-clarify{position:absolute;top:12px;right:12px;font-size:9px;color:rgba(255,255,255,.5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:2px 7px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:5px}
+.num-clarify .dt{width:5px;height:5px;border-radius:50%;background:#F0C040}
+
+.tri-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.tri-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column}
+.tri-card-h{font-size:10px;color:rgba(34,197,94,.7);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:10px}
+.tri-card-d{font-size:11px;color:rgba(255,255,255,.6);line-height:1.55;margin-top:auto;padding-top:6px}
+.tri-card-d strong{color:#fff;font-weight:600}
+
+.it-timeline{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.it-tl-point{flex:1;display:flex;flex-direction:column;gap:2px}
+.it-tl-date{font-size:13px;font-weight:700;color:rgba(255,255,255,.7);font-variant-numeric:tabular-nums}
+.it-tl-point.tgt .it-tl-date{color:#22C55E}
+.it-tl-name{font-size:10px;color:rgba(255,255,255,.45);line-height:1.4}
+.it-tl-arr{font-size:14px;color:rgba(34,197,94,.45)}
+
+.fmwk{display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+.fmwk-item{display:flex;align-items:baseline;gap:8px;font-size:11px;color:rgba(255,255,255,.75);padding-left:10px;position:relative}
+.fmwk-item::before{content:'';width:4px;height:4px;border-radius:50%;background:#22C55E;flex-shrink:0;position:absolute;left:0;top:7px}
+.fmwk-item strong{color:#fff;font-weight:600}
+.fmwk-item em{font-style:normal;color:rgba(255,255,255,.4)}
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;margin-bottom:8px}
+.team-row{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:10px;line-height:1.5;padding:2px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.team-row .nm{color:#fff;font-weight:500}
+.team-row .ro{color:rgba(255,255,255,.4);text-align:right;font-size:9px}
+
+.soft-strip{display:grid;grid-template-columns:auto 1fr auto;gap:14px;padding:10px 16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:8px;align-items:center;margin-top:auto}
+.soft-strip-tag{font-size:9px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:3px 8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;flex-shrink:0}
+.soft-strip-text{font-size:11px;color:rgba(255,255,255,.7);line-height:1.5}
+.soft-strip-text strong{color:#fff;font-weight:600}
+.soft-link{font-size:10px;color:#22C55E;font-weight:600;text-decoration:none;border-bottom:1px dashed rgba(34,197,94,.4);padding-bottom:1px;white-space:nowrap;cursor:pointer}
+.soft-link:hover{color:#4ADE80}
+
+/* ─── B1 KPI Dashboard backup ─── */
+.kpi-app-hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.kpi-hcard{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.22);border-radius:12px;padding:18px 22px}
+.kpi-hcard.amber{background:rgba(240,192,64,.05);border-color:rgba(240,192,64,.22)}
+.kpi-hcap{font-size:10px;color:#22C55E;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:10px}
+.kpi-hcard.amber .kpi-hcap{color:rgba(240,192,64,.85)}
+.kpi-h-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.kpi-h-big{font-size:clamp(40px,5vw,56px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#22C55E;font-variant-numeric:tabular-nums}
+.kpi-hcard.amber .kpi-h-big{color:#F0C040}
+.kpi-h-plan{font-size:16px;color:rgba(255,255,255,.45);font-weight:500}
+.kpi-h-pct{font-size:13px;font-weight:600;padding:4px 9px;border-radius:5px;background:rgba(34,197,94,.12);color:#22C55E;font-family:monospace}
+.kpi-hcard.amber .kpi-h-pct{background:rgba(240,192,64,.12);color:#F0C040}
+.kpi-h-bar{margin-top:12px;height:6px;border-radius:4px;background:rgba(255,255,255,.04);overflow:hidden}
+.kpi-h-bar-f{height:100%;background:linear-gradient(90deg,#22C55E,rgba(34,197,94,.4));border-radius:4px}
+.kpi-hcard.amber .kpi-h-bar-f{background:linear-gradient(90deg,#F0C040,rgba(240,192,64,.4))}
+.kpi-h-note{font-size:11px;color:rgba(255,255,255,.5);margin-top:8px;line-height:1.5;font-family:monospace}
+
+.kpi-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.kpi-tile{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 14px}
+.kpi-tile-l{font-size:9px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;font-weight:600;margin-bottom:8px;line-height:1.3;min-height:2.6em}
+.kpi-tile-v{font-size:22px;font-weight:800;line-height:1;letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums}
+.kpi-tile-v.ok{color:#22C55E}
+.kpi-tile-v.warn{color:#F0C040}
+.kpi-tile-v.bad{color:#EF4444}
+.kpi-tile-m{display:flex;justify-content:space-between;margin-top:6px;font-size:10px;color:rgba(255,255,255,.45);font-family:monospace}
+.kpi-tile-m .ok{color:#22C55E;font-weight:600}
+.kpi-tile-m .warn{color:#F0C040;font-weight:600}
+.kpi-tile-m .bad{color:#EF4444;font-weight:600}
+
+.kpi-banks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kpi-bank{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 18px}
+.kpi-bank-h{font-size:13px;color:rgba(255,255,255,.85);font-weight:700;margin-bottom:10px;display:flex;align-items:baseline;gap:8px}
+.kpi-bank-h .tag{font-family:monospace;font-size:9px;color:rgba(255,255,255,.4);font-weight:500;text-transform:uppercase;letter-spacing:1px}
+.kpi-bank-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.kpi-bank-s{text-align:center}
+.kpi-bank-s-v{font-size:20px;font-weight:700;line-height:1;color:rgba(255,255,255,.85);font-variant-numeric:tabular-nums}
+.kpi-bank-s-v.ok{color:#22C55E}
+.kpi-bank-s-v.warn{color:#F0C040}
+.kpi-bank-s-v.bad{color:#EF4444}
+.kpi-bank-s-l{font-size:9px;color:rgba(255,255,255,.4);margin-top:4px;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.kpi-bank-s-p{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;font-family:monospace}
+
+@media(max-width:900px){.sp,.sp-13,.dash-grid,.lessons,.voc3,.tool-traits,.init-grid,.supp-items,.scn-grid,.bc-hero,.giga-grid,.cal-reg,.arch3,.ceo-grid,.hero-perim,.dual-cards,.perim-row,.num-row-2,.tri-cards,.kpi-app-hero,.kpi-banks,.team-grid{grid-template-columns:1fr}.prog{grid-template-columns:1fr;gap:8px}.prog-arr,.hero-perim-arrow{display:none}.kpi-tiles{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="ib" id="ib" style="width:5.88%"></div>
+<div class="bg"></div>
+
+<nav class="nav">
+  <div class="nt">Бизнес-сообщества Сбера · Итоги пилота</div>
+  <div class="nd" id="dots"></div>
+  <div class="nc" id="cnt">1 / 10</div>
+</nav>
+
+<div class="SS" id="sl">
+
+<!-- ═══════════════ 1 · COVER ═══════════════ -->
+<div class="S a" data-n="1">
+  <div class="lb">Доклад · 15 мин + Q&amp;A</div>
+  <div class="tt">Бизнес-сообщества <span class="g">Сбера</span></div>
+
+  <div class="agenda">
+    <div class="ag-row">
+      <div class="ag-num">01</div>
+      <div>
+        <div class="ag-name">Итоги пилота</div>
+        <div class="ag-desc">Что обещали · что построили · что нашли</div>
+      </div>
+    </div>
+    <div class="ag-row">
+      <div class="ag-num">02</div>
+      <div>
+        <div class="ag-name">Продуктовая модель</div>
+        <div class="ag-desc">Какой продукт строим · ценность для КИБ</div>
+      </div>
+    </div>
+    <div class="ag-row">
+      <div class="ag-num">03</div>
+      <div>
+        <div class="ag-name">Дальнейшие шаги</div>
+        <div class="ag-desc">Ключевые инициативы · поддержка</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ 2 · ЧТО ОБЕЩАЛИ ═══════════════ -->
+<div class="S" data-n="2">
+  <div class="lb">01 · контракт пилота</div>
+  <div class="tt">Что обещали — где сейчас</div>
+
+  <div style="display:flex;flex-direction:column;margin-bottom:8px">
+
+    <div class="con-row">
+      <div class="con-was">
+        <div class="con-was-cap">Периметр</div>
+        <div class="con-was-sub">7 проектов · 2 ТБ<br>3 000 участников</div>
+      </div>
+      <div class="con-arr">→</div>
+      <div class="con-now bul-list">
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">9</span> проектов</div>
+          <div class="bul-sub">КСБ — Содействие (Благо · ЦТ · HRD · CEO) · РГС — Свернём горы<br>ММБ — E-com, Бухгалтеры, Эксперты, Иззи</div>
+        </div>
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">3</span> ТБ</div>
+          <div class="bul-sub">Уральский · Среднерусский · Дальневосточный</div>
+        </div>
+        <div class="bul-item">
+          <div class="bul-head"><span class="a">2 437</span> целевых участников</div>
+          <div class="bul-sub">общее количество регистраций на платформе — 6 280</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="con-row">
+      <div class="con-was">
+        <div class="con-was-cap">ИТ-решение</div>
+        <div class="con-was-sub">отдельное ИТ-решение<br>под продукт</div>
+      </div>
+      <div class="con-arr">→</div>
+      <div class="con-now bul-list">
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">Q3 2025</span> — решение для пилота</div>
+          <div class="bul-sub">развитие функционала АС БКП</div>
+        </div>
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">Q3 2026</span> — целевое решение<span class="badge-soon">прогноз</span></div>
+          <div class="bul-sub">собственное решение СберУниверситета · инвестиции в CAPEX = 45 млн ₽</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="con-row">
+      <div class="con-was">
+        <div class="con-was-cap">Команда и продукт</div>
+        <div class="con-was-sub">собранная команда<br>и собственный продукт</div>
+      </div>
+      <div class="con-arr">→</div>
+      <div class="con-now bul-list">
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">14</span> экспертов</div>
+          <div class="bul-sub">комьюнити-менеджмент · методология · ИТ</div>
+        </div>
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">методология готова</span></div>
+          <div class="bul-sub">проектирование, запуск, развитие зрелости</div>
+        </div>
+        <div class="bul-item">
+          <div class="bul-head"><span class="g">продукт консолидируется в СберУниверситете</span></div>
+          <div class="bul-sub">флагман новой коммерческой стратегии СберУниверситета</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="con-row kpi-row">
+    <div class="con-was">
+      <div class="con-was-cap">Отчётные KPI's пилота</div>
+      <div class="con-was-sub">счета и активации<br>в пилотных ТБ</div>
+    </div>
+    <div class="con-arr">→</div>
+    <div class="con-now bul-list">
+      <div class="bul-item">
+        <div class="bul-head"><span class="g">168</span>/150</div>
+        <div class="bul-sub">открыто счетов 34, активир. счетов 92, активир. клиентов 42</div>
+      </div>
+      <div class="bul-item">
+        <div class="bul-head">Уточняем цифры к 01.07</div>
+        <div class="bul-sub">совместно с проектным офисом КИБ готовим формулировки итогового обоснования для финансистов · <a href="http://5.129.246.32/share/kpi-2d284bb916efe945.html" target="_blank" rel="noopener" style="color:#22C55E;border-bottom:1px dashed rgba(34,197,94,.4);text-decoration:none">→ Дашборд</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ 3 · ОБЪЁМ ═══════════════ -->
+<div class="S" data-n="3">
+<div class="lb">02 · объём операционки · по двум пилотным ТБ</div>
+<div class="tt">8 месяцев <span class="g">активной операционки</span></div>
+<div class="sp" style="margin-top:42px;align-items:center;gap:36px">
+
+<div>
+<div style="font-size:clamp(56px,8vw,88px);font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em">1 118</div>
+<div style="width:48px;height:2px;background:#22C55E;margin-top:18px;border-radius:2px"></div>
+<div style="font-size:16px;color:rgba(255,255,255,.55);margin-top:14px;line-height:1.4">касаний с клиентами</div>
+<div style="font-size:13px;color:rgba(255,255,255,.4);margin-top:14px;line-height:1.7">126&nbsp;мероприятий&nbsp;&nbsp;·&nbsp;&nbsp;12&nbsp;городов<br>860+&nbsp;оффлайн-участников&nbsp;&nbsp;·&nbsp;&nbsp;×1,3&nbsp;повторных</div>
+<div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:16px;line-height:1.5">+&nbsp;<strong style="color:#fff;font-weight:600">40+&nbsp;мероприятий</strong>&nbsp;запланировано на Q2–Q3 · <a href="http://5.129.246.32/calendar/" target="_blank" rel="noopener" style="color:#22C55E;border-bottom:1px dashed rgba(34,197,94,.4);text-decoration:none">→&nbsp;Календарь</a></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+
+<div style="text-align:center;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:18px 14px">
+<div style="font-size:clamp(40px,6vw,56px);font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em">4,6<span style="font-size:.42em;color:rgba(255,255,255,.3);font-weight:400;letter-spacing:0">&thinsp;/&thinsp;5,0</span></div>
+<div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px">CSI</div>
+<div style="font-size:11px;color:rgba(255,255,255,.35);margin-top:3px">peer-to-peer 30–70%</div>
+</div>
+
+<div style="text-align:center;background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.18);border-radius:10px;padding:18px 14px">
+<div style="font-size:clamp(36px,5.5vw,52px);font-weight:800;color:#EF4444;line-height:1;letter-spacing:-.02em">22–38<span style="font-size:.6em;font-weight:700">%</span></div>
+<div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px">заполняемость мероприятий</div>
+<div style="font-size:11px;color:rgba(255,255,255,.35);margin-top:3px">узкое горлышко</div>
+</div>
+
+<div style="text-align:center;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:18px 14px">
+<div style="font-size:clamp(36px,5.5vw,52px);font-weight:800;color:rgba(255,255,255,.85);line-height:1;letter-spacing:-.02em">22–50<span style="font-size:.42em;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:0">&thinsp;тыс&thinsp;₽</span></div>
+<div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px">текущая стоимость касания</div>
+<div style="font-size:11px;color:rgba(255,255,255,.35);margin-top:3px">при текущей инфраструктуре</div>
+</div>
+
+<div style="position:relative;text-align:center;background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.32);border-radius:10px;padding:18px 14px;box-shadow:0 10px 28px -14px rgba(34,197,94,.35)">
+<div style="position:absolute;top:10px;right:10px;background:rgba(34,197,94,.18);color:#22C55E;font-size:11px;font-weight:800;letter-spacing:.02em;padding:2px 7px;border-radius:5px;line-height:1.3">÷5</div>
+<div style="font-size:clamp(36px,5.5vw,52px);font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em">5–11<span style="font-size:.42em;color:rgba(34,197,94,.55);font-weight:500;letter-spacing:0">&thinsp;тыс&thinsp;₽</span></div>
+<div style="font-size:13px;color:rgba(255,255,255,.65);margin-top:8px">потенциальная стоимость касания</div>
+<div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">за счёт развития инфраструктуры, ретеншн</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ═══════════════ 4 · УРОКИ ═══════════════ -->
+<div class="S" data-n="4">
+  <div class="lb">03 · уроки пилота · что узнали за год</div>
+  <div class="tt">Получилось · узкие места · нашли</div>
+
+  <div class="lessons">
+
+    <div class="les-col win">
+      <div class="les-h">Получилось ✓</div>
+      <ul class="bul-l">
+        <li class="v">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Продукт работает</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">P2P-механики, CSI 4,6 из 5, UGC — клиенты сами включаются и распространяют</div>
+          </div>
+        </li>
+        <li class="v">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Инициативы снизу — нас ищут</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">Запуск CEO-клуба · запросы на франшизу, МФЦ, университеты — бизнес видит в нас опору как в новом инструменте</div>
+          </div>
+        </li>
+        <li class="v">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">KPI пилота <span style="background:rgba(240,192,64,.15);color:#F0C040;font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px;text-transform:uppercase;letter-spacing:.05em;border:1px solid rgba(240,192,64,.3)">прогнозируем выполнение</span></div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">3 000 регистраций · 150 банковских KPI · данные собираем оставшиеся 1,5 месяца — добираем цифры</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="les-col fail">
+      <div class="les-h">Узкие места ✗</div>
+      <ul class="bul-l">
+        <li class="x">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Вовлечение клиентов через КМ</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">Заполняемость 22–38% · каждое приглашение через КМ — странно и не масштабируется, канал перегружен</div>
+          </div>
+        </li>
+        <li class="x">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Зависимость от маркетинга ПАО</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">Нереализованные планы по ИТ-решению · закупки не тянут — стоимость, скорость, контрагенты, объём мероприятий</div>
+          </div>
+        </li>
+        <li class="x">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Инициатива сверху без кастдева</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">Иззи-бизнес, благотворительность, ИЧАРы — лидеры сегментов решают без аналитики, какие проекты нужны. Так не работает.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="les-col find">
+      <div class="les-h">Нашли · работаем →</div>
+      <ul class="bul-l">
+        <li class="h">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Встройка в активности сегментов + интеграция партнёров</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">Бух-слёты в ММБ, акселераторы/хакатоны в КСБ, клиентские встречи РГС — наш интерактив усиливает чужие форматы, тащим конкретные сделки</div>
+          </div>
+        </li>
+        <li class="h">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Потенциал снижения стоимости касания в 5 раз при том же CSI/NPS</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">От дорогих касаний сверху-вниз → к частотным, исходящим из цели клиента → возвращаются в банк лояльностью</div>
+          </div>
+        </li>
+        <li class="h">
+          <div>
+            <div style="color:#fff;font-weight:600;margin-bottom:3px">Бизнес-сообщество / клубы — новый флагман СберУниверситета</div>
+            <div style="color:rgba(255,255,255,.5);font-weight:400">Первое место в коммерческой стратегии СберУниверситета · подписка как сборка сегментных предложений для клиента · готовы инвестировать в свой ИТ — одна сборка под крылом</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════ 5 · МОДЕЛЬ ═══════════════ -->
+<div class="S" data-n="5">
+  <div class="lb">04 · продуктовый поворот · что мы нашли</div>
+  <div class="tt">Наш продукт — <span class="g">бизнес-клубы</span></div>
+  <div class="tt-sub">Переходим от разовых мероприятий к регулярному взаимодействию с клиентом вокруг его значимых личных и профессиональных целей. Вовлекаем в существующие бизнес-клубы, развиваем новые тематические треки, побуждаем делать свой вклад.</div>
+
+  <div class="model-frame">
+    <div class="model-frame-tag">Бизнес-сообщество клиентов Сбера</div>
+
+    <div class="prog">
+      <div class="prog-st">
+        <div class="prog-lab">Этап 1</div>
+        <div class="prog-name">Мероприятие</div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Ценность для клиента</div>
+          <div class="prog-bl-t">Разовое касание · «посетил»</div>
+        </div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Ценность для банка</div>
+          <div class="prog-bl-t">Охват</div>
+        </div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Стоимость касания</div>
+          <div class="prog-bl-t">50 тыс ₽ · КМ</div>
+        </div>
+      </div>
+      <div class="prog-arr">→</div>
+
+      <div class="prog-st now">
+        <div class="prog-lab">Этап 2 · мы здесь</div>
+        <div class="prog-name">Серия / программа</div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Ценность для клиента</div>
+          <div class="prog-bl-t">Сезонный ритм · «хожу» · первые связи</div>
+        </div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Ценность для банка</div>
+          <div class="prog-bl-t">Узнаваемость · лояльность</div>
+        </div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Стоимость касания</div>
+          <div class="prog-bl-t">20–25 тыс ₽ · КМ + экосистема</div>
+        </div>
+      </div>
+      <div class="prog-arr">→</div>
+
+      <div class="prog-st tgt">
+        <div class="prog-lab">Этап 3 · цель</div>
+        <div class="prog-name">Бизнес-клуб</div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Ценность для клиента</div>
+          <div class="prog-bl-t">Регулярный ритм · «моё место» · CSAT</div>
+        </div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Ценность для банка</div>
+          <div class="prog-bl-t">Доверие · CLTV · партнёрство</div>
+        </div>
+        <div class="prog-block">
+          <div class="prog-bl-l">Стоимость касания</div>
+          <div class="prog-bl-t">5–11 тыс ₽ · КМ-вход — дальше сами</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tline">
+      <div class="tline-bar">
+        <div class="tline-fill" style="width:35%"></div>
+        <div class="tline-dot" style="left:33%"></div>
+        <div class="tline-targ" style="left:55%;width:35%"></div>
+      </div>
+      <div class="tline-labs">
+        <span>Мероприятие</span>
+        <span style="color:rgba(255,255,255,.55)">Серия · мы здесь</span>
+        <span class="g">Бизнес-клуб · цель 2026–28</span>
+      </div>
+    </div>
+
+    <div class="model-meta">
+      Задача команды — <strong>создавать и развивать бизнес-клубы, содействующие успеху клиента</strong> в значимом личном или профессиональном. Управление клубами происходит по <a href="http://5.129.246.32/share/maturity-70d9f1de7e25d606.html" target="_blank" rel="noopener" style="color:#22C55E;border-bottom:1px dashed rgba(34,197,94,.5);text-decoration:none;font-weight:600">модели зрелости</a>.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ 6 · ГОЛОС КЛИЕНТА ═══════════════ -->
+<div class="S" data-n="6">
+  <div class="lb">05 · что уносят участники</div>
+  <div class="tt">Голос <span class="g">клиента</span></div>
+
+  <!-- SECTION HEADER 1 -->
+  <div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-top:14px;margin-bottom:8px">Личные кейсы участников</div>
+
+  <!-- ROW 1: 3 личных кейса -->
+  <div class="voc3" style="grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:stretch">
+
+    <!-- Card 1: Vladimir -->
+    <div class="voc-c">
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:2px">
+        <div class="av-c">ВА</div>
+        <div style="flex:1;min-width:0">
+          <div class="voc-tag" style="margin-bottom:5px">ММБ · Эксперт-наставник</div>
+          <div class="voc-h">Владимир Алдушин <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0;display:block;margin-top:2px">предприниматель · эксперт клуба</span></div>
+        </div>
+      </div>
+      <div class="voc-quote">
+        <div class="voc-quote-t">Через участие в клубе — <strong>новые знакомства и возможности</strong> для эксперта и клиента.</div>
+      </div>
+      <div class="voc-row">
+        <div class="voc-l">Результат</div>
+        <div class="voc-t"><strong>7 клиентов</strong> · 2 офлайн + 1 онлайн выступление · контент в Сбере</div>
+      </div>
+    </div>
+
+    <!-- Card 2: Evgenia -->
+    <div class="voc-c">
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:2px">
+        <div class="av-c">ЕЗ</div>
+        <div style="flex:1;min-width:0">
+          <div class="voc-tag" style="margin-bottom:5px">ММБ · Траектория роста</div>
+          <div class="voc-h">Евгения Зотова <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0;display:block;margin-top:2px">предпринимательница · участница клуба</span></div>
+        </div>
+      </div>
+      <div class="voc-quote">
+        <div class="voc-quote-t">Перестала стыдиться метода. Запустила вебинары с Алиной Синичкиной. Пригласили на обед к руководителю дивизиона. На Avito результаты попёрли.</div>
+      </div>
+      <div class="voc-row">
+        <div class="voc-l">Результат</div>
+        <div class="voc-t"><strong>Вырос доход</strong> · стала наставником · из участницы — <strong>в партнёра Сбера</strong></div>
+      </div>
+    </div>
+
+    <!-- Card 3: EP Trade (КСБ team voice — blue tint) -->
+    <div class="voc-c" style="background:rgba(125,153,255,.05);border-color:rgba(125,153,255,.25)">
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:2px">
+        <div class="av-grp">
+          <div class="av-c ph" style="border-color:rgba(125,153,255,.5)"><img src="img/ep_owner_t10.jpg" style="object-position:50% 22%" alt=""></div>
+          <div class="av-c ph" style="border-color:rgba(125,153,255,.5)"><img src="img/ep_kd1.jpg" style="object-position:50% 18%" alt=""></div>
+          <div class="av-c ph" style="border-color:rgba(125,153,255,.5)"><img src="img/ep_kd2.jpg" style="object-position:50% 18%" alt=""></div>
+        </div>
+        <div style="flex:1;min-width:0">
+          <div class="voc-tag" style="margin-bottom:5px;background:rgba(125,153,255,.1);border-color:rgba(125,153,255,.25);color:rgba(125,153,255,.95)">КСБ · CEO-клуб ДВ · команда</div>
+          <div class="voc-h">EP Trade <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0;display:block;margin-top:2px">собственник + 2 ком-директора</span></div>
+        </div>
+      </div>
+      <div class="voc-quote" style="background:rgba(125,153,255,.06);border-left-color:rgba(125,153,255,.55)">
+        <div class="voc-quote-t"><strong>Тревога ушла.</strong> Понимаю — мы делаем правильные вещи. Двигаюсь абсолютно правильно — как и все здесь.</div>
+        <div class="voc-quote-a">— собственник EP Trade</div>
+      </div>
+      <div class="voc-row">
+        <div class="voc-l" style="color:rgba(125,153,255,.85)">Голоса команды</div>
+        <div class="voc-t">«отрасли разные, проблемы одинаковые» · «среда равных — релакс» · «хочется в полноценный клуб»</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECTION HEADER 2 -->
+  <div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-top:14px;margin-bottom:8px">Деловые связи · клиентский ужин</div>
+
+  <!-- ROW 2: Полноширинный ужин с примерами связей -->
+  <div class="voc-c" style="padding:14px 18px;background:rgba(240,192,64,.04);border-color:rgba(240,192,64,.2)">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px;flex-wrap:wrap">
+      <div>
+        <div class="voc-tag" style="margin-bottom:6px;background:rgba(240,192,64,.1);border-color:rgba(240,192,64,.25);color:rgba(240,192,64,.95)">КСБ · клиентский ужин «СО.Действие»</div>
+        <div class="voc-h" style="font-size:clamp(20px,2.4vw,26px);line-height:1.1">Клиентский ужин <span style="font-size:13px;color:rgba(255,255,255,.45);font-weight:500;letter-spacing:0">14 компаний за одним столом</span></div>
+      </div>
+      <div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.4;max-width:340px;text-align:right">Сложилось <strong style="color:#F0C040;font-weight:700">6+ деловых связей</strong> — несколько ключевых ниже:</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px">
+      <div style="border-left:2px solid rgba(34,197,94,.4);padding:2px 0 2px 10px">
+        <div style="font-size:12px;font-weight:600;color:#22C55E;margin-bottom:3px">Кибербез</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.55);line-height:1.45">Ароматный мир + Нова Ролл + Хоффтех × <strong style="color:rgba(255,255,255,.9);font-weight:600">ПозитивТех</strong> — общие боли, форматы сотрудничества</div>
+      </div>
+      <div style="border-left:2px solid rgba(34,197,94,.4);padding:2px 0 2px 10px">
+        <div style="font-size:12px;font-weight:600;color:#22C55E;margin-bottom:3px">Облака</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.55);line-height:1.45">Хоффтех + Ароматный мир + ПозитивТех × <strong style="color:rgba(255,255,255,.9);font-weight:600">Cloud.ru</strong> — миграция с Selectel, возврат потребления</div>
+      </div>
+      <div style="border-left:2px solid rgba(34,197,94,.4);padding:2px 0 2px 10px">
+        <div style="font-size:12px;font-weight:600;color:#22C55E;margin-bottom:3px">Конкуренты как партнёры</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.55);line-height:1.45"><strong style="color:rgba(255,255,255,.9);font-weight:600">Нова Ролл + Готэк</strong> — пошлины и преференции для иностранных производителей упаковки</div>
+      </div>
+      <div style="border-left:2px solid rgba(34,197,94,.4);padding:2px 0 2px 10px">
+        <div style="font-size:12px;font-weight:600;color:#22C55E;margin-bottom:3px">Стратегическое партнёрство</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.55);line-height:1.45"><strong style="color:rgba(255,255,255,.9);font-weight:600">ВГК × Сбер</strong> — страт-диалог по цифровой стратегии финансов, новые потоки потребления</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION HEADER 3 -->
+  <div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-top:14px;margin-bottom:8px">Опрос участников · 636 ответов</div>
+
+  <!-- ROW 3: Метрик-стрип -->
+  <div style="padding:14px 18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:grid;grid-template-columns:auto 1fr;gap:14px 24px;align-items:center">
+
+    <div style="display:flex;align-items:baseline;gap:8px">
+      <span style="font-size:28px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">4,56</span>
+      <span style="font-size:13px;color:rgba(255,255,255,.4)">/ 5,0</span>
+      <span style="font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin-left:6px">полезность</span>
+    </div>
+
+    <div style="font-size:12px;color:rgba(255,255,255,.6);justify-self:end"><strong style="color:#fff;font-weight:600">59,3%</strong>&nbsp;с&nbsp;опытом · 40,7%&nbsp;впервые в&nbsp;деловых клубах</div>
+
+    <div style="grid-column:1 / -1;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <span style="font-size:11px;padding:4px 10px;background:rgba(34,197,94,.14);color:#22C55E;border:1px solid rgba(34,197,94,.32);border-radius:99px;font-weight:700">Практико-применимый контент 41,7%</span>
+      <span style="font-size:11px;padding:4px 10px;background:rgba(34,197,94,.14);color:#22C55E;border:1px solid rgba(34,197,94,.32);border-radius:99px;font-weight:700">Нетворкинг 26,3%</span>
+      <span style="font-size:11px;padding:4px 10px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.08);border-radius:99px">Польза 20,8%</span>
+      <span style="font-size:11px;padding:4px 10px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.08);border-radius:99px">Спикеры 11,2%</span>
+    </div>
+
+  </div>
+
+  <!-- ROW 4: Вывод -->
+  <div class="voc-foot-band" style="margin-top:10px">
+    <strong>Клиент уносит контакты, рост и инструменты.</strong> Возвращается, потому что видит ценность.
+  </div>
+</div>
+
+<!-- ═══════════════ 7 · 108 млн ₽ УРАЛЬСКИЙ (Sitnov) ═══════════════ -->
+<div class="S" data-n="7">
+  <div class="lb">06 · подтверждённый результат · Уральский банк</div>
+  <div class="tt">Обратная связь от <span class="g">территории</span></div>
+
+  <div class="sp" style="margin-top:24px">
+
+    <div style="display:flex;flex-direction:column;justify-content:center">
+      <div style="margin-bottom:24px">
+        <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+          <div style="font-size:clamp(56px,8vw,88px);font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.03em">108<span style="font-size:clamp(24px,3vw,36px);color:rgba(34,197,94,.6)"> млн ₽</span></div>
+          <div style="font-size:14px;color:rgba(34,197,94,.5)">выручка с НДС</div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px;margin-top:8px">
+          <div style="font-size:clamp(28px,4vw,40px);font-weight:800;color:#fff;line-height:1">43<span style="font-size:clamp(16px,2vw,22px);color:rgba(255,255,255,.5)"> млн ₽</span></div>
+          <div style="font-size:14px;color:rgba(255,255,255,.4)">финрез для Сбера</div>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,.3);margin-top:4px">Первая в стране лизинговая сделка ГигаЧат Enterprise</div>
+      </div>
+      <div style="background:rgba(255,255,255,.02);border-left:2px solid rgba(255,255,255,.15);border-radius:0 8px 8px 0;padding:14px 18px">
+        <div style="font-size:13px;font-style:italic;color:rgba(255,255,255,.45);line-height:1.6">«Благодаря совместной деятельности и серии мероприятий Центра Сообществ были заключены контракты с 14 компаниями на сумму 108 млн руб. (43 млн финрез для Сбера).»</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:6px">— Виталий Дорошенко, управляющий Югорским отделением</div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:16px">
+      <div style="font-size:10px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px">Наш вклад в цепочке</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:12px 16px;font-size:14px;color:rgba(255,255,255,.5)">Серия мероприятий по GenAI <span style="color:rgba(34,197,94,.5);font-size:12px;font-weight:600">· 14 компаний</span></div>
+        <div style="text-align:center;color:rgba(34,197,94,.3);font-size:12px">↓</div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:12px 16px;font-size:14px;color:rgba(255,255,255,.5)">Проблематизация ЛПР <span style="color:rgba(255,255,255,.3);font-size:12px">· 180 инициатив GenAI</span></div>
+        <div style="text-align:center;color:rgba(34,197,94,.3);font-size:12px">↓</div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:12px 16px;font-size:14px;color:rgba(255,255,255,.5)">Пилот у клиента <span style="color:rgba(255,255,255,.3);font-size:12px">· 9 сделок</span></div>
+        <div style="text-align:center;color:rgba(34,197,94,.3);font-size:12px">↓</div>
+        <div style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);border-radius:8px;padding:12px 16px;font-size:14px;font-weight:600;color:#22C55E">Результат · выручка 108 млн ₽ · <span style="color:#fff">финрез 43 млн ₽</span></div>
+      </div>
+      <div style="font-size:11px;color:rgba(255,255,255,.25);margin-top:4px">Один ТБ. Вопрос — масштабирование.</div>
+    </div>
+
+  </div>
+
+  <div class="voc-foot-band" style="margin-top:18px">
+    <strong>Бизнес-клуб не закрывает сделки.</strong> Он ускоряет проблематизацию и сокращает путь клиента. Сделку делает банк — его продукты, его люди. Мы — катализатор, и наш вклад в этой цепочке честно ограничен.
+  </div>
+</div>
+
+<!-- ═══════════════ 8 · ИНСТРУМЕНТ ═══════════════ -->
+<div class="S" data-n="8">
+  <div class="lb">07 · что даём банку · три эффекта</div>
+  <div class="tt">Мы вооружаем КИБ <span class="g">новым инструментом</span></div>
+  <div class="tt-sub">Три эффекта, на которые работаем — лояльность, скорость, экономика взаимодействия.</div>
+
+  <div class="tool-traits">
+    <div class="tool-tr">
+      <div class="tool-tr-n">01 · Эффект</div>
+      <div class="tool-tr-v">Лояльность</div>
+      <div class="tool-tr-h">Содействуем успеху клиента = CSAT / CSI · лестница доверия</div>
+      <div class="tool-tr-d">Взаимодействие помогает клиенту <strong>решать значимые личные и профессиональные вопросы</strong>. Растут CSAT, CSI и лестница доверия с банком.</div>
+    </div>
+    <div class="tool-tr">
+      <div class="tool-tr-n">02 · Эффект</div>
+      <div class="tool-tr-v">Скорость</div>
+      <div class="tool-tr-h">Ускоряем сделки · повышаем NPS</div>
+      <div class="tool-tr-d">Быстрый старт между подключением и пользой — <strong>дни, а не месяцы</strong>. Не ждём старта программ.</div>
+    </div>
+    <div class="tool-tr">
+      <div class="tool-tr-n">03 · Эффект</div>
+      <div class="tool-tr-v">Экономика</div>
+      <div class="tool-tr-h">Снижаем стоимость взаимодействия в 5 раз</div>
+      <div class="tool-tr-d">За счёт <strong>инфраструктуры, оптимизации процессов и ретеншена</strong>. С 2027 года — софинансирование со стороны клиентов.</div>
+    </div>
+  </div>
+
+  <div class="eb" style="margin-top:6px">Особенности · уникальность</div>
+  <div class="apps">
+    <div class="app">
+      <div class="app-n">A</div>
+      <div>
+        <div class="app-h">Выше отдача от расходов на маркетинг</div>
+        <div class="app-t">За тот же бюджет — <strong>больше касаний, retention и данных</strong>. Усиление маркетинга, не замена.</div>
+      </div>
+    </div>
+    <div class="app">
+      <div class="app-n">B</div>
+      <div>
+        <div class="app-h">Top of mind у продающих ролей</div>
+        <div class="app-t">Любимая опция у клиентской вертикали; <strong>опция развития отношений</strong> для сегментов централизованно.</div>
+      </div>
+    </div>
+    <div class="app">
+      <div class="app-n">C</div>
+      <div>
+        <div class="app-h">Заметная ценность для клиента</div>
+        <div class="app-t">Консолидируем активности вокруг <strong>потребности клиента</strong> — снижает шум. Быстрая активация: ценность начинает работать <strong>в любой момент</strong>.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ 9 · БЛИЖАЙШИЕ ПРИОРИТЕТЫ ═══════════════ -->
+<div class="S" data-n="9">
+  <div class="lb">08 · что дальше · ближайшие приоритеты</div>
+  <div class="tt">Ближайшие <span class="g">приоритеты</span></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px">
+
+    <!-- Priority 1: Закрытие пилота -->
+    <div style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.28);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="font-size:24px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">01</div>
+          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.2">Закрытие пилота</div>
+        </div>
+        <div style="background:#22C55E;color:#0A0A0A;font-size:9px;font-weight:800;padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">★ Помощь</div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.55">
+        Финальные цифры · обоснования · защита у финансистов. Придём через месяц.
+      </div>
+      <div style="background:rgba(255,255,255,.04);border-left:2px solid rgba(34,197,94,.55);padding:8px 12px;font-size:11px;color:rgba(255,255,255,.8)">
+        <strong style="color:#22C55E;font-weight:700">Что нужно:</strong> подписать распоряжение
+      </div>
+    </div>
+
+    <!-- Priority 2: Корректировка бюджета H2 -->
+    <div style="background:rgba(240,192,64,.04);border:1px solid rgba(240,192,64,.22);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="font-size:24px;font-weight:800;color:#F0C040;letter-spacing:-.02em;line-height:1">02</div>
+          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.2">Корректировка бюджета H2 2026</div>
+        </div>
+        <div style="background:rgba(240,192,64,.16);color:#F0C040;font-size:9px;font-weight:700;padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.08em;border:1px solid rgba(240,192,64,.3);white-space:nowrap">возможна поддержка</div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.55">
+        В резерве <strong style="color:#fff;font-weight:600">187 млн ₽</strong> · нужно ещё <strong style="color:#F0C040;font-weight:700">~100 млн ₽</strong> на ускорение эффектов в КИБ: новые инициативы, тиражирование, подключение новых ТБ.
+      </div>
+      <div style="background:rgba(240,192,64,.05);border-left:2px solid rgba(240,192,64,.45);padding:8px 12px;font-size:11px;color:rgba(255,255,255,.7)">
+        Прорабатываем источники, <strong style="color:#F0C040;font-weight:700">возможно потребуется поддержка</strong> в согласовании бюджета или корректировок.
+      </div>
+    </div>
+
+    <!-- Priority 3: ИТ-решение -->
+    <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="font-size:24px;font-weight:800;color:rgba(255,255,255,.7);letter-spacing:-.02em;line-height:1">03</div>
+          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.2">Форсируем ИТ-решение</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);font-size:9px;font-weight:700;padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.08em;border:1px solid rgba(255,255,255,.12);white-space:nowrap">сами</div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.55">
+        Финализируем закупку · выделяем <strong style="color:#fff;font-weight:600">45 млн ₽ собственного CAPEX</strong> · стартуем разработку. До готовности — работаем с маркетингом ПАО (поддержка договорена до конца года).
+      </div>
+      <div style="background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.15);padding:8px 12px;font-size:11px;color:rgba(255,255,255,.55)">
+        <strong style="color:rgba(255,255,255,.85);font-weight:700">Помощь не нужна</strong>
+      </div>
+    </div>
+
+    <!-- Priority 4: Активация нового продукта -->
+    <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="font-size:24px;font-weight:800;color:rgba(255,255,255,.7);letter-spacing:-.02em;line-height:1">04</div>
+          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.2">Активация нового продукта</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);font-size:9px;font-weight:700;padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.08em;border:1px solid rgba(255,255,255,.12);white-space:nowrap">сами</div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.55">
+        Описываем продукт · ставим на полку · подписываем контракт <strong style="color:#fff;font-weight:600">СберУниверситет ↔ ПАО Сбербанк</strong>.
+      </div>
+      <div style="background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.15);padding:8px 12px;font-size:11px;color:rgba(255,255,255,.55)">
+        <strong style="color:rgba(255,255,255,.85);font-weight:700">Помощь не нужна</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom: Контрольная точка -->
+  <div style="margin-top:14px;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.28);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="color:#22C55E;font-size:18px;line-height:1">★</span>
+      <span style="font-size:10px;color:#22C55E;text-transform:uppercase;letter-spacing:1.5px;font-weight:800">Контрольная точка</span>
+    </div>
+    <div style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.4;flex:1;min-width:240px">
+      <strong style="color:#fff;font-weight:700">01.07.2027</strong> — переход от <strong style="color:rgba(255,255,255,.65);font-weight:600">проектного финансирования</strong> в <strong style="color:#22C55E;font-weight:700">продуктовую логику</strong> работы СберУниверситета и банка.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ 10 · ПРИЛОЖЕНИЕ ═══════════════ -->
+<div class="S" data-n="10">
+  <div class="lb">Приложение · drill-down под вопросы</div>
+  <div class="tt">Три источника <span class="g">данных</span></div>
+  <div class="tt-sub">Дашборды и календарь — открываются в новой вкладке. Полное состояние пилота, модели зрелости и план мероприятий.</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:24px">
+
+    <!-- Card 1: KPI Dashboard -->
+    <a href="http://5.129.246.32/share/kpi-2d284bb916efe945.html" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <div style="background:rgba(34,197,94,.04);border:1px solid rgba(34,197,94,.22);border-radius:12px;padding:20px 22px;height:100%;display:flex;flex-direction:column;gap:14px;transition:all .2s ease">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:9px;color:rgba(34,197,94,.8);text-transform:uppercase;letter-spacing:1.5px;font-weight:700">01 · Дашборд</div>
+          <div style="color:#22C55E;font-size:14px">↗</div>
+        </div>
+        <div style="font-size:22px;font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.01em">KPI пилота</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.55">
+          Срез по двум пилотным ТБ от проектного офиса КИБ. <strong style="color:#fff;font-weight:600">168/150</strong> банковских KPI · CSI · заполняемость · стоимость касания.
+        </div>
+        <div style="margin-top:auto;display:flex;align-items:center;gap:6px;font-size:11px;color:#22C55E;font-weight:600">
+          Открыть дашборд
+          <span>→</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 2: Maturity Model -->
+    <a href="http://5.129.246.32/share/maturity-70d9f1de7e25d606.html" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <div style="background:rgba(240,192,64,.04);border:1px solid rgba(240,192,64,.22);border-radius:12px;padding:20px 22px;height:100%;display:flex;flex-direction:column;gap:14px;transition:all .2s ease">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:9px;color:rgba(240,192,64,.85);text-transform:uppercase;letter-spacing:1.5px;font-weight:700">02 · Модель</div>
+          <div style="color:#F0C040;font-size:14px">↗</div>
+        </div>
+        <div style="font-size:22px;font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.01em">Зрелость клубов</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.55">
+          Модель управления зрелостью каждого клуба: <strong style="color:#fff;font-weight:600">5 групп факторов · 15 параметров</strong>. Текущий статус и план развития.
+        </div>
+        <div style="margin-top:auto;display:flex;align-items:center;gap:6px;font-size:11px;color:#F0C040;font-weight:600">
+          Открыть модель
+          <span>→</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 3: Calendar -->
+    <a href="http://5.129.246.32/calendar/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+      <div style="background:rgba(125,153,255,.04);border:1px solid rgba(125,153,255,.22);border-radius:12px;padding:20px 22px;height:100%;display:flex;flex-direction:column;gap:14px;transition:all .2s ease">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:9px;color:rgba(125,153,255,.85);text-transform:uppercase;letter-spacing:1.5px;font-weight:700">03 · Календарь</div>
+          <div style="color:#7D99FF;font-size:14px">↗</div>
+        </div>
+        <div style="font-size:22px;font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.01em">Календарь мероприятий</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.55">
+          Все мероприятия пилота с фильтром по сегментам. <strong style="color:#fff;font-weight:600">40+ запланировано</strong> на Q2–Q3 2026.
+        </div>
+        <div style="margin-top:auto;display:flex;align-items:center;gap:6px;font-size:11px;color:#7D99FF;font-weight:600">
+          Открыть календарь
+          <span>→</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div style="margin-top:24px;text-align:center;font-size:11px;color:rgba(255,255,255,.35);font-style:italic">Назад к презентации — закрыть вкладку в браузере</div>
+</div>
+
+
+</div>
+
+<div class="ctr">
+  <button class="btn bp" id="prev">‹ Назад</button>
+  <button class="btn bn" id="next">Далее ›</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.S');
+const total = slides.length;
+const cnt = document.getElementById('cnt');
+const ib = document.getElementById('ib');
+const dotsBox = document.getElementById('dots');
+let cur = 0;
+
+for (let i = 0; i < total; i++){
+  const d = document.createElement('div');
+  d.className = 'dot' + (i===0 ? ' a' : '');
+  d.addEventListener('click', () => go(i));
+  dotsBox.appendChild(d);
+}
+
+function go(idx){
+  if (idx < 0) idx = 0;
+  if (idx > total - 1) idx = total - 1;
+  slides[cur].classList.remove('a');
+  slides[idx].classList.add('a');
+  document.querySelectorAll('.dot')[cur].classList.remove('a');
+  document.querySelectorAll('.dot')[idx].classList.add('a');
+  cur = idx;
+  cnt.textContent = (cur + 1) + ' / ' + total;
+  ib.style.width = ((cur + 1) / total * 100) + '%';
+}
+
+document.getElementById('prev').addEventListener('click', () => go(cur - 1));
+document.getElementById('next').addEventListener('click', () => go(cur + 1));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(cur + 1); }
+  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(cur - 1); }
+  if (e.key === 'Home') go(0);
+  if (e.key === 'End') go(total - 1);
+});
+
+cnt.textContent = '1 / ' + total;
+</script>
+</body>
+</html>
