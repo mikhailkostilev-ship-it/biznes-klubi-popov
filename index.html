@@ -23,9 +23,10 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 @keyframes fi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
 .lb{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#22C55E;margin-bottom:12px;font-weight:600}
-.tt{font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.05;margin-bottom:14px;letter-spacing:-.03em;max-width:920px}
+.tt{font-size:clamp(30px,4.2vw,48px);font-weight:700;line-height:1.05;margin-bottom:14px;letter-spacing:-.03em;max-width:980px}
+.S[data-n="1"] .tt{font-size:clamp(40px,6.5vw,72px);line-height:1;letter-spacing:-.035em;margin-bottom:32px;max-width:none}
 .tt .g{color:#22C55E}
-.tt-sub{font-size:13px;line-height:1.55;color:rgba(255,255,255,.5);margin-bottom:24px;max-width:840px}
+.tt-sub{font-size:14px;line-height:1.55;color:rgba(255,255,255,.55);margin-bottom:20px;max-width:900px}
 .tt-sub strong{color:#fff;font-weight:600}
 
 .sp{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
@@ -42,17 +43,17 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 .eb.w{color:rgba(255,255,255,.35)}
 
 /* ─── 1 COVER ─── */
-.agenda{display:flex;flex-direction:column;gap:14px;max-width:720px}
-.ag-row{display:flex;align-items:baseline;gap:18px}
-.ag-num{font-size:32px;font-weight:800;color:#22C55E;min-width:42px;line-height:1;letter-spacing:-.02em}
-.ag-name{font-size:20px;font-weight:600;color:rgba(255,255,255,.85);line-height:1.2}
-.ag-desc{font-size:12px;color:rgba(255,255,255,.4);margin-top:3px;line-height:1.45}
+.agenda{display:flex;flex-direction:column;gap:18px;max-width:760px}
+.ag-row{display:flex;align-items:baseline;gap:20px}
+.ag-num{font-size:38px;font-weight:800;color:#22C55E;min-width:52px;line-height:1;letter-spacing:-.02em}
+.ag-name{font-size:22px;font-weight:600;color:rgba(255,255,255,.9);line-height:1.2}
+.ag-desc{font-size:13px;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.45}
 
 /* ─── 2 ОБЕЩАЛИ — Apple style ─── */
 .con-row{display:grid;grid-template-columns:1fr auto 2.1fr;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05);align-items:center}
 .con-row:last-of-type{border-bottom:0}
 .con-was{display:flex;flex-direction:column;gap:4px}
-.con-was-cap{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1.8px;font-weight:600}
+.con-was-cap{font-size:11px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1.8px;font-weight:700}
 .con-was-sub{font-size:12px;color:rgba(255,255,255,.35);line-height:1.35;font-weight:400}
 .con-arr{font-size:14px;color:rgba(255,255,255,.18);font-weight:300}
 .con-now{display:flex;flex-direction:column;gap:5px}
@@ -63,7 +64,7 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 .bul-head .g{color:#22C55E}
 .bul-head .a{color:#F0C040}
 .bul-head small{font-size:12px;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:0}
-.bul-sub{font-size:10.5px;color:rgba(255,255,255,.4);line-height:1.5;letter-spacing:.1px}
+.bul-sub{font-size:11.5px;color:rgba(255,255,255,.45);line-height:1.5;letter-spacing:.1px}
 .badge-soon{display:inline-block;font-size:9px;font-weight:700;color:rgba(125,153,255,.95);background:rgba(125,153,255,.1);border:1px solid rgba(125,153,255,.4);border-radius:3px;padding:2px 7px;text-transform:uppercase;letter-spacing:1px;margin-left:8px;vertical-align:middle}
 .con-now-t .g{color:#22C55E}
 .con-now-t .a{color:#F0C040}
@@ -159,10 +160,10 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 .tline-fill{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,#22C55E,rgba(34,197,94,.3));border-radius:3px}
 .tline-dot{position:absolute;top:-7px;width:22px;height:19px;background:#22C55E;clip-path:polygon(0 0, 100% 50%, 0 100%);filter:drop-shadow(0 0 8px rgba(34,197,94,.7))}
 .tline-targ{position:absolute;top:0;height:100%;background:rgba(34,197,94,.1);border-radius:3px;border:1px dashed rgba(34,197,94,.25)}
-.tline-labs{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:rgba(255,255,255,.4)}
-.tline-labs .g{color:#22C55E;font-weight:600}
+.tline-labs{display:flex;justify-content:space-between;margin-top:10px;font-size:12px;color:rgba(255,255,255,.5)}
+.tline-labs .g{color:#22C55E;font-weight:700}
 
-.model-meta{margin-top:14px;font-size:12px;color:rgba(255,255,255,.55);line-height:1.6;text-align:center}
+.model-meta{margin-top:14px;font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;text-align:center}
 .model-meta strong{color:#fff;font-weight:600}
 .model-meta em{color:#22C55E;font-style:normal;font-weight:600}
 
@@ -796,8 +797,8 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
   </div>
 
   <!-- Финальная плашка -->
-  <div style="margin-top:14px;padding:12px 18px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.28);border-radius:10px;font-size:14px;color:rgba(255,255,255,.9);line-height:1.5">
-    <strong style="color:#22C55E;font-weight:700">Бизнес-сообщества — №1 в коммерческой стратегии СберУниверситета.</strong> Среда вокруг пути улучшает конверсию на каждом этапе. <span style="color:rgba(255,255,255,.65)">Дальше — что показывает пилот.</span>
+  <div style="margin-top:14px;padding:14px 20px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.28);border-radius:10px;font-size:clamp(14px,1.4vw,17px);color:rgba(255,255,255,.9);line-height:1.5">
+    <strong style="color:#22C55E;font-weight:800">Бизнес-сообщества — №1 в коммерческой стратегии СберУниверситета.</strong> <span style="color:rgba(255,255,255,.7)">Среда вокруг пути улучшает конверсию на каждом этапе.</span>
   </div>
 </div>
 
@@ -916,14 +917,14 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 </div>
 
 <div style="position:relative;text-align:center;background:rgba(240,192,64,.05);border:1px solid rgba(240,192,64,.3);border-radius:10px;padding:18px 14px">
-<div style="position:absolute;top:10px;right:10px;background:rgba(240,192,64,.16);color:#F0C040;font-size:9px;font-weight:800;letter-spacing:.08em;padding:2px 7px;border-radius:5px;line-height:1.3;text-transform:uppercase">AS IS</div>
+<div style="position:absolute;top:10px;right:10px;background:rgba(240,192,64,.18);color:#F0C040;font-size:11px;font-weight:800;letter-spacing:.08em;padding:3px 9px;border-radius:5px;line-height:1.3;text-transform:uppercase">AS IS</div>
 <div style="font-size:clamp(36px,5.5vw,52px);font-weight:800;color:#F0C040;line-height:1;letter-spacing:-.02em">22–50<span style="font-size:.42em;color:rgba(240,192,64,.55);font-weight:500;letter-spacing:0">&thinsp;тыс&thinsp;₽</span></div>
 <div style="font-size:13px;color:rgba(255,255,255,.65);margin-top:8px">стоимость касания</div>
 <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">в текущих условиях и инфраструктуре</div>
 </div>
 
 <div style="position:relative;text-align:center;background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.32);border-radius:10px;padding:18px 14px;box-shadow:0 10px 28px -14px rgba(34,197,94,.35)">
-<div style="position:absolute;top:10px;right:10px;background:rgba(34,197,94,.18);color:#22C55E;font-size:9px;font-weight:800;letter-spacing:.08em;padding:2px 7px;border-radius:5px;line-height:1.3;text-transform:uppercase">TO BE&nbsp;·&nbsp;÷5</div>
+<div style="position:absolute;top:10px;right:10px;background:rgba(34,197,94,.2);color:#22C55E;font-size:11px;font-weight:800;letter-spacing:.08em;padding:3px 9px;border-radius:5px;line-height:1.3;text-transform:uppercase">TO BE&nbsp;·&nbsp;÷5</div>
 <div style="font-size:clamp(36px,5.5vw,52px);font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em">5–11<span style="font-size:.42em;color:rgba(34,197,94,.55);font-weight:500;letter-spacing:0">&thinsp;тыс&thinsp;₽</span></div>
 <div style="font-size:13px;color:rgba(255,255,255,.65);margin-top:8px">стоимость касания</div>
 <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">за счёт развития инфраструктуры, ретеншн</div>
@@ -1384,7 +1385,7 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
       <span style="color:#22C55E;font-size:18px;line-height:1">★</span>
       <span style="font-size:10px;color:#22C55E;text-transform:uppercase;letter-spacing:1.5px;font-weight:800">Контрольная точка</span>
     </div>
-    <div style="font-size:14px;color:#22C55E;line-height:1.4;flex:1;min-width:240px;font-weight:600">
+    <div style="font-size:17px;color:#22C55E;line-height:1.4;flex:1;min-width:240px;font-weight:600">
       <strong style="color:#22C55E;font-weight:800">01.07.2027</strong> — переход от пилота к продукту.
     </div>
   </div>
