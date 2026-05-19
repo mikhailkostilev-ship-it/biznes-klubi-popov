@@ -150,14 +150,14 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 .prog-st.tgt .prog-name{color:#22C55E}
 .prog-block{display:flex;flex-direction:column;gap:2px;padding-top:6px;border-top:1px solid rgba(255,255,255,.05)}
 .prog-bl-l{font-size:9px;color:rgba(255,255,255,.4);text-transform:none;letter-spacing:.3px;font-weight:600}
-.prog-bl-t{font-size:11px;color:rgba(255,255,255,.65);line-height:1.4}
+.prog-bl-t{font-size:12px;color:rgba(255,255,255,.7);line-height:1.45}
 .prog-st.tgt .prog-bl-t{color:rgba(255,255,255,.85)}
 .prog-arr{display:flex;align-items:center;padding:0 8px;color:rgba(34,197,94,.5);font-size:14px}
 
 .tline{position:relative;margin:20px 0 4px}
 .tline-bar{height:5px;background:rgba(255,255,255,.04);border-radius:3px;position:relative;overflow:visible}
 .tline-fill{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,#22C55E,rgba(34,197,94,.3));border-radius:3px}
-.tline-dot{position:absolute;top:-4px;width:14px;height:13px;background:#22C55E;clip-path:polygon(0 0, 100% 50%, 0 100%);filter:drop-shadow(0 0 6px rgba(34,197,94,.65))}
+.tline-dot{position:absolute;top:-7px;width:22px;height:19px;background:#22C55E;clip-path:polygon(0 0, 100% 50%, 0 100%);filter:drop-shadow(0 0 8px rgba(34,197,94,.7))}
 .tline-targ{position:absolute;top:0;height:100%;background:rgba(34,197,94,.1);border-radius:3px;border:1px dashed rgba(34,197,94,.25)}
 .tline-labs{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:rgba(255,255,255,.4)}
 .tline-labs .g{color:#22C55E;font-weight:600}
@@ -221,11 +221,11 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 
 /* ─── 8 ИНСТРУМЕНТ ─── */
 .tool-traits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
-.tool-tr{background:rgba(240,192,64,.05);border:1px solid rgba(240,192,64,.2);border-radius:14px;padding:18px 20px;position:relative}
-.tool-tr-n{font-size:11px;color:rgba(240,192,64,.85);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px}
-.tool-tr-v{font-size:32px;font-weight:800;color:#F0C040;line-height:1;letter-spacing:-.02em;margin-bottom:6px}
-.tool-tr-h{font-size:14px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:6px}
-.tool-tr-d{font-size:11px;color:rgba(255,255,255,.6);line-height:1.55}
+.tool-tr{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.22);border-radius:14px;padding:18px 20px;position:relative}
+.tool-tr-n{font-size:11px;color:rgba(34,197,94,.9);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px}
+.tool-tr-v{font-size:36px;font-weight:800;color:#22C55E;line-height:1;letter-spacing:-.02em;margin-bottom:8px}
+.tool-tr-h{font-size:15.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px}
+.tool-tr-d{font-size:12px;color:rgba(255,255,255,.65);line-height:1.55}
 .tool-tr-d strong{color:#fff;font-weight:600}
 
 .apps{display:flex;flex-direction:column;gap:8px}
@@ -591,7 +591,7 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
       <div class="ag-num">01</div>
       <div>
         <div class="ag-name">Знакомство</div>
-        <div class="ag-desc">Павел Калашников · БДРО · модель работы СберУниверситета с клиентом</div>
+        <div class="ag-desc">Павел Калашников · модель работы СберУниверситета с клиентом</div>
       </div>
     </div>
     <div class="ag-row">
@@ -624,42 +624,49 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
   <div class="tt"><span class="g">Павел Калашников</span></div>
   <div class="tt-sub">Что меняется в коммерческом блоке СберУниверситета.</div>
 
-  <div style="display:grid;grid-template-columns:minmax(260px,36%) 1fr;gap:30px;margin-top:24px;align-items:stretch">
+  <div style="display:grid;grid-template-columns:minmax(240px,32%) 1fr;gap:30px;margin-top:20px;align-items:start">
 
     <!-- Левая: персона -->
-    <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;flex-direction:column;gap:14px">
       <div style="aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px -10px rgba(0,0,0,.6)">
         <img src="img/pavel.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="Павел Калашников">
       </div>
-      <div style="font-size:15px;color:rgba(255,255,255,.85);line-height:1.5">
-        Коммерческий директор · руководитель <s style="color:rgba(255,255,255,.3)">коммерческого</s> <strong style="color:#fff;font-weight:700">Блока доверия и развития отношений (БДРО)</strong> · <span style="color:rgba(255,255,255,.7)">СберУниверситет</span>
-      </div>
+      <div style="font-size:14.5px;color:rgba(255,255,255,.9);line-height:1.5">Коммерческий директор СберУниверситета</div>
+      <div style="font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.5">Руководитель <s style="color:rgba(255,255,255,.3)">Коммерческого</s> <strong style="color:#22C55E;font-weight:700">Блока Доверия и Развития Отношений</strong></div>
       <div style="height:1px;background:rgba(255,255,255,.08)"></div>
       <div style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.6">ВГУЭП · Владивосток · 11+ лет в Сбере · 14 патентов</div>
-      <div style="font-size:12px;color:rgba(255,255,255,.4);font-style:italic">рыбалка · сноуборд · фрирайд · серф</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.5;padding:8px 12px;background:rgba(34,197,94,.04);border-left:2px solid rgba(34,197,94,.4);border-radius:0 6px 6px 0"><span style="color:#22C55E;font-weight:700;margin-right:6px">★</span>рыбалка · сноуборд · фрирайд · серф · фото</div>
     </div>
 
-    <!-- Правая: 4 тезиса 2x2 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
-        <div style="font-size:9.5px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase">Тезис 1</div>
-        <div style="font-size:17px;font-weight:700;color:#fff;line-height:1.3">Сбер — изнутри, от продаж до стратегии</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;margin-top:auto"><strong style="color:#fff;font-weight:600">11+ лет</strong> в Сбере. От начальника сектора продаж зарплатных проектов в Дальневосточном банке — до управляющего директора.</div>
+    <!-- Правая: 4 тезиса в один столбец -->
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center">
+        <div style="font-size:10px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap">Тезис 1</div>
+        <div>
+          <div style="font-size:15.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Сбер — изнутри, от продаж до стратегии</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.5"><strong style="color:#fff;font-weight:600">11+ лет</strong> в Сбере. От начальника сектора продаж зарплатных проектов в Дальневосточном банке — до управляющего директора.</div>
+        </div>
       </div>
-      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
-        <div style="font-size:9.5px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase">Тезис 2</div>
-        <div style="font-size:17px;font-weight:700;color:#fff;line-height:1.3">№1 на Дальнем Востоке · 4 года подряд</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;margin-top:auto"><strong style="color:#fff;font-weight:600">2018–2021</strong> — лидер по приросту ФОТ клиентской базы среди ТБ. Лидер корпоративной культуры 2020, участник «Лидеров России».</div>
+      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center">
+        <div style="font-size:10px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap">Тезис 2</div>
+        <div>
+          <div style="font-size:15.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">№1 на Дальнем Востоке · 4 года подряд</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.5"><strong style="color:#fff;font-weight:600">2018–2021</strong> — лидер по приросту ФОТ клиентской базы среди ТБ. Лидер корпоративной культуры 2020, участник «Лидеров России».</div>
+        </div>
       </div>
-      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
-        <div style="font-size:9.5px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase">Тезис 3</div>
-        <div style="font-size:17px;font-weight:700;color:#fff;line-height:1.3">Цифровые продукты — на внешний рынок</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;margin-top:auto">2 года УД Департамента недвижимости. Цифровая трансформация, кросс-функциональная команда (PM · разработчики · data scientists), <strong style="color:#fff;font-weight:600">14 патентов</strong>, продукты на внешний рынок.</div>
+      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center">
+        <div style="font-size:10px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap">Тезис 3</div>
+        <div>
+          <div style="font-size:15.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Цифровые продукты — на внешний рынок</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.5">2 года УД Департамента недвижимости. Цифровая трансформация, кросс-функциональная команда (PM · разработчики · data scientists), <strong style="color:#fff;font-weight:600">14 патентов</strong>, продукты на внешний рынок.</div>
+        </div>
       </div>
-      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
-        <div style="font-size:9.5px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase">Тезис 4</div>
-        <div style="font-size:17px;font-weight:700;color:#fff;line-height:1.3">Что делаю в СберУниверситете</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;margin-top:auto">Коммерческая стратегия · B2B продажа образовательных продуктов · партнёрская сеть · масштабирование на внешний рынок · доходность направлений.</div>
+      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center">
+        <div style="font-size:10px;color:rgba(34,197,94,.85);font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap">Тезис 4</div>
+        <div>
+          <div style="font-size:15.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Что делаю в СберУниверситете</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.5">Коммерческая стратегия · B2B продажа образовательных продуктов · партнёрская сеть · масштабирование на внешний рынок · доходность направлений.</div>
+        </div>
       </div>
     </div>
 
@@ -669,85 +676,122 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
 <!-- ═══════════════ 3 · КОНТЕКСТ · НАША СТАВКА ═══════════════ -->
 <div class="S" data-n="3">
   <div class="lb">02 · контекст · что меняется в СУ</div>
-  <div class="tt">От <span style="color:rgba(255,255,255,.5);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3)">продавца программ</span> — к <span class="g">партнёру по развитию</span></div>
-  <div class="tt-sub">БДРО — Блок Доверия и Развития Отношений. Перестраиваем СберУниверситет под взаимодействие с клиентом на всём пути. Бизнес-сообщество — среда вокруг.</div>
+  <div class="tt">От <span style="color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3)">продавца программ</span> — к <span class="g">партнёру по развитию</span></div>
+  <div class="tt-sub">Перестраиваем СберУниверситет под взаимодействие с клиентом на всём жизненном пути. Бизнес-сообщество — среда вокруг.</div>
 
-  <!-- BEFORE / AFTER comparison -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1.05fr;gap:18px;margin-top:18px;align-items:start">
 
-    <!-- БЫЛО -->
-    <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 18px">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <!-- COL 1: БЫЛО (wheel muted, only #3 highlighted) -->
+    <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 14px 10px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
         <span style="font-size:9px;color:rgba(255,255,255,.5);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:3px 8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase">было</span>
-        <span style="font-size:13px;color:rgba(255,255,255,.55)">Продуктоцентрично — касание только в точке продажи</span>
+        <span style="font-size:11px;color:rgba(255,255,255,.55)">продуктоцентрично</span>
       </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 0">
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.35)">1</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Осознание</div></div>
-        <div style="color:rgba(255,255,255,.15)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.35)">2</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Запрос</div></div>
-        <div style="color:rgba(255,255,255,.15)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:#F0C040;border:1px solid #F0C040;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0A0A0A">3</div><div style="font-size:10px;color:#F0C040;margin-top:4px;font-weight:700">Обучение</div></div>
-        <div style="color:rgba(255,255,255,.15)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.35)">4</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Развитие</div></div>
-        <div style="color:rgba(255,255,255,.15)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.35)">5</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Амбасс.</div></div>
-      </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.4);font-style:italic;margin-top:8px;line-height:1.5">Клиент приходит за программой и уходит. Дальнейшего контакта нет.</div>
+      <svg viewBox="0 0 600 400" style="width:100%;display:block">
+        <!-- 5 узлов: только #3 ярким, остальные muted; стрелок нет (или dashed) -->
+        <circle cx="300" cy="70" r="30" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <text x="300" y="80" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,.35)">1</text>
+        <text x="300" y="22" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,.4)">Осознание</text>
+
+        <circle cx="423.6" cy="159.8" r="30" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <text x="423.6" y="169.8" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,.35)">2</text>
+        <text x="478" y="148" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,.4)">Запрос</text>
+
+        <!-- #3 highlighted yellow -->
+        <circle cx="376.4" cy="305.2" r="30" fill="#F0C040" stroke="#F0C040" stroke-width="1.5"/>
+        <text x="376.4" y="315.2" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="24" font-weight="800" fill="#0A0A0A">3</text>
+        <text x="408" y="365" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#F0C040">Обучение</text>
+
+        <circle cx="223.6" cy="305.2" r="30" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <text x="223.6" y="315.2" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,.35)">4</text>
+        <text x="192" y="365" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,.4)">Развитие</text>
+
+        <circle cx="176.4" cy="159.8" r="30" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+        <text x="176.4" y="169.8" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,.35)">5</text>
+        <text x="122" y="148" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,.4)">Амбассадор</text>
+
+        <text x="300" y="195" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="800" fill="rgba(255,255,255,.35)" letter-spacing="3">КАСАНИЕ</text>
+        <text x="300" y="215" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="12" font-weight="800" fill="rgba(255,255,255,.35)" letter-spacing="3">ТОЛЬКО ТУТ</text>
+      </svg>
+      <div style="font-size:11px;color:rgba(255,255,255,.45);font-style:italic;line-height:1.5;text-align:center;margin-top:-4px">Клиент приходит за программой — и уходит.</div>
     </div>
 
-    <!-- СТАЛО -->
-    <div style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.28);border-radius:12px;padding:14px 18px">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <span style="font-size:9px;color:#22C55E;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.32);border-radius:4px;padding:3px 8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase">стало</span>
-        <span style="font-size:13px;color:rgba(255,255,255,.85)">Человекоцентрично — присутствие на всём пути клиента</span>
+    <!-- COL 2: ЦЕЛЕВАЯ МОДЕЛЬ (wheel all green closed loop) -->
+    <div style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.28);border-radius:12px;padding:14px 14px 10px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span style="font-size:9px;color:#22C55E;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.32);border-radius:4px;padding:3px 8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase">целевая модель</span>
+        <span style="font-size:11px;color:rgba(255,255,255,.7)">человекоцентрично</span>
       </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 0">
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:#22C55E;border:1px solid #22C55E;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0A0A0A">1</div><div style="font-size:10px;color:#fff;margin-top:4px;font-weight:600">Осознание</div></div>
-        <div style="color:rgba(34,197,94,.5)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:#22C55E;border:1px solid #22C55E;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0A0A0A">2</div><div style="font-size:10px;color:#fff;margin-top:4px;font-weight:600">Запрос</div></div>
-        <div style="color:rgba(34,197,94,.5)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:#22C55E;border:1px solid #22C55E;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0A0A0A">3</div><div style="font-size:10px;color:#fff;margin-top:4px;font-weight:600">Обучение</div></div>
-        <div style="color:rgba(34,197,94,.5)">→</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:#22C55E;border:1px solid #22C55E;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0A0A0A">4</div><div style="font-size:10px;color:#fff;margin-top:4px;font-weight:600">Развитие</div></div>
-        <div style="color:rgba(34,197,94,.5)">↻</div>
-        <div style="text-align:center;flex:1"><div style="width:28px;height:28px;background:#22C55E;border:1px solid #22C55E;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0A0A0A">5</div><div style="font-size:10px;color:#fff;margin-top:4px;font-weight:600">Амбасс.</div></div>
+      <svg viewBox="0 0 600 400" style="width:100%;display:block">
+        <defs>
+          <marker id="arr-g3" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+            <path d="M 0,0 L 12,6 L 0,12 Z" fill="#22C55E"/>
+          </marker>
+        </defs>
+        <path d="M 331.4,73.9 A 130,130 0 0 1 410.2,131.1" fill="none" stroke="#22C55E" stroke-width="2.5" marker-end="url(#arr-g3)" opacity="0.9"/>
+        <path d="M 429.7,190.9 A 130,130 0 0 1 399.6,283.6" fill="none" stroke="#22C55E" stroke-width="2.5" marker-end="url(#arr-g3)" opacity="0.9"/>
+        <path d="M 348.7,320.5 A 130,130 0 0 1 251.3,320.5" fill="none" stroke="#22C55E" stroke-width="2.5" marker-end="url(#arr-g3)" opacity="0.9"/>
+        <path d="M 200.4,283.6 A 130,130 0 0 1 170.3,190.9" fill="none" stroke="#22C55E" stroke-width="2.5" marker-end="url(#arr-g3)" opacity="0.9"/>
+        <path d="M 189.8,131.1 A 130,130 0 0 1 268.6,73.9" fill="none" stroke="#22C55E" stroke-width="2.5" marker-end="url(#arr-g3)" opacity="0.9"/>
+
+        <circle cx="300" cy="70" r="30" fill="#22C55E"/>
+        <text x="300" y="80" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="24" font-weight="800" fill="#0A0A0A">1</text>
+        <text x="300" y="22" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">Осознание</text>
+
+        <circle cx="423.6" cy="159.8" r="30" fill="#22C55E"/>
+        <text x="423.6" y="169.8" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="24" font-weight="800" fill="#0A0A0A">2</text>
+        <text x="478" y="148" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">Запрос</text>
+
+        <circle cx="376.4" cy="305.2" r="30" fill="#22C55E"/>
+        <text x="376.4" y="315.2" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="24" font-weight="800" fill="#0A0A0A">3</text>
+        <text x="408" y="365" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">Обучение</text>
+
+        <circle cx="223.6" cy="305.2" r="30" fill="#22C55E"/>
+        <text x="223.6" y="315.2" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="24" font-weight="800" fill="#0A0A0A">4</text>
+        <text x="192" y="365" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">Развитие</text>
+
+        <circle cx="176.4" cy="159.8" r="30" fill="#22C55E"/>
+        <text x="176.4" y="169.8" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="24" font-weight="800" fill="#0A0A0A">5</text>
+        <text x="122" y="148" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">Амбассадор</text>
+
+        <text x="300" y="195" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="800" fill="#22C55E" letter-spacing="3">ЖИЗНЕННЫЙ</text>
+        <text x="300" y="215" text-anchor="middle" font-family="-apple-system,system-ui,sans-serif" font-size="13" font-weight="800" fill="#22C55E" letter-spacing="3">ПУТЬ</text>
+      </svg>
+      <div style="font-size:11px;color:rgba(255,255,255,.7);font-style:italic;line-height:1.5;text-align:center;margin-top:-4px">Круг замыкается: <strong style="color:#22C55E;font-style:normal">амбассадор приводит нового клиента</strong>.</div>
+    </div>
+
+    <!-- COL 3: 5 этапов с vкладом сообщества (yellow frame) -->
+    <div class="model-frame" style="margin-top:0;padding:18px 16px 12px">
+      <div class="model-frame-tag" style="font-size:9px">Вклад бизнес-сообщества</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="padding:7px 10px;background:rgba(240,192,64,.04);border-left:2px solid rgba(240,192,64,.5);border-radius:0 6px 6px 0">
+          <div style="font-size:10px;color:#F0C040;font-weight:800;letter-spacing:.05em;margin-bottom:2px">01 · Осознание</div>
+          <div style="font-size:11.5px;color:rgba(255,255,255,.8);line-height:1.4">peer-to-peer истории клиентов, UGC</div>
+        </div>
+        <div style="padding:7px 10px;background:rgba(240,192,64,.04);border-left:2px solid rgba(240,192,64,.5);border-radius:0 6px 6px 0">
+          <div style="font-size:10px;color:#F0C040;font-weight:800;letter-spacing:.05em;margin-bottom:2px">02 · Запрос</div>
+          <div style="font-size:11.5px;color:rgba(255,255,255,.8);line-height:1.4">формализация через клуб и тематические встречи</div>
+        </div>
+        <div style="padding:7px 10px;background:rgba(240,192,64,.04);border-left:2px solid rgba(240,192,64,.5);border-radius:0 6px 6px 0">
+          <div style="font-size:10px;color:#F0C040;font-weight:800;letter-spacing:.05em;margin-bottom:2px">03 · Обучение</div>
+          <div style="font-size:11.5px;color:rgba(255,255,255,.8);line-height:1.4">формат клуба + контент СУ и партнёров</div>
+        </div>
+        <div style="padding:7px 10px;background:rgba(240,192,64,.04);border-left:2px solid rgba(240,192,64,.5);border-radius:0 6px 6px 0">
+          <div style="font-size:10px;color:#F0C040;font-weight:800;letter-spacing:.05em;margin-bottom:2px">04 · Развитие</div>
+          <div style="font-size:11.5px;color:rgba(255,255,255,.8);line-height:1.4">связи и retention внутри клуба</div>
+        </div>
+        <div style="padding:7px 10px;background:rgba(240,192,64,.04);border-left:2px solid rgba(240,192,64,.5);border-radius:0 6px 6px 0">
+          <div style="font-size:10px;color:#F0C040;font-weight:800;letter-spacing:.05em;margin-bottom:2px">05 · Амбассадор</div>
+          <div style="font-size:11.5px;color:rgba(255,255,255,.8);line-height:1.4">клиент приводит новых — круг замыкается</div>
+        </div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.7);font-style:italic;margin-top:8px;line-height:1.5">Круг замыкается: <strong style="color:#22C55E;font-style:normal">амбассадор приводит нового клиента</strong>.</div>
     </div>
 
   </div>
 
-  <!-- Бизнес-сообщество как обхватывающая среда -->
-  <div class="model-frame" style="margin-top:14px;padding:18px 22px 14px">
-    <div class="model-frame-tag">Бизнес-сообщество для клиентов Сбера · среда вокруг пути</div>
-
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-      <div style="text-align:center;padding:8px 10px;background:rgba(240,192,64,.03);border:1px solid rgba(240,192,64,.15);border-radius:8px">
-        <div style="font-size:9px;color:rgba(240,192,64,.9);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">01 Осознание</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.4">peer-to-peer истории клиентов, UGC</div>
-      </div>
-      <div style="text-align:center;padding:8px 10px;background:rgba(240,192,64,.03);border:1px solid rgba(240,192,64,.15);border-radius:8px">
-        <div style="font-size:9px;color:rgba(240,192,64,.9);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">02 Запрос</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.4">формализация через клуб, тематические встречи</div>
-      </div>
-      <div style="text-align:center;padding:8px 10px;background:rgba(240,192,64,.03);border:1px solid rgba(240,192,64,.15);border-radius:8px">
-        <div style="font-size:9px;color:rgba(240,192,64,.9);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">03 Обучение</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.4">формат клуба + контент СУ и партнёров</div>
-      </div>
-      <div style="text-align:center;padding:8px 10px;background:rgba(240,192,64,.03);border:1px solid rgba(240,192,64,.15);border-radius:8px">
-        <div style="font-size:9px;color:rgba(240,192,64,.9);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">04 Развитие</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.4">связи и retention внутри клуба</div>
-      </div>
-      <div style="text-align:center;padding:8px 10px;background:rgba(240,192,64,.03);border:1px solid rgba(240,192,64,.15);border-radius:8px">
-        <div style="font-size:9px;color:rgba(240,192,64,.9);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">05 Амбассадор</div>
-        <div style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.4">клиент приводит новых — круг замыкается</div>
-      </div>
-    </div>
-
-    <div class="model-meta" style="margin-top:14px">
-      <strong>Бизнес-сообщества — №1 в коммерческой стратегии СберУниверситета.</strong><br>
-      Среда вокруг пути улучшает конверсию на каждом этапе. Дальше — что показывает пилот.
-    </div>
+  <!-- Финальная плашка -->
+  <div style="margin-top:14px;padding:12px 18px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.28);border-radius:10px;font-size:14px;color:rgba(255,255,255,.9);line-height:1.5">
+    <strong style="color:#22C55E;font-weight:700">Бизнес-сообщества — №1 в коммерческой стратегии СберУниверситета.</strong> Среда вокруг пути улучшает конверсию на каждом этапе. <span style="color:rgba(255,255,255,.65)">Дальше — что показывает пилот.</span>
   </div>
 </div>
 
@@ -897,84 +941,80 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
   <div class="tt">Стоимость касания и наполняемость — <span class="g">как улучшаем в H2</span></div>
   <div class="tt-sub">Шесть механик. Запускаем своими силами. Преемственность со слабыми цифрами операционки.</div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px">
+  <div style="display:flex;flex-direction:column;gap:8px;margin-top:18px">
 
     <!-- 01: Бизнес-партнёр от сегмента -->
-    <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
-        <div>
-          <div style="font-size:13px;color:rgba(34,197,94,.95);font-weight:800;letter-spacing:.04em;margin-bottom:4px">01 ·</div>
-          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.25">Бизнес-партнёр от сегмента / клуба</div>
-        </div>
-        <div style="font-size:9px;color:#22C55E;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);border-radius:99px;padding:2px 7px;font-weight:600;white-space:nowrap;flex-shrink:0">↑ наполняемость</div>
+    <div style="display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:10px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px">
+      <div style="font-size:22px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">01</div>
+      <div>
+        <div style="font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Бизнес-партнёр от сегмента / клуба</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.45">С РГС, КСБ, ММБ договариваемся о выделенном бизнес-партнёре с явным KPI на работу с нами. <span style="color:rgba(255,255,255,.5)">Из факультативного контрагента — в приоритет сегмента; клиенты приходят системно.</span></div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5"><span style="color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Суть · </span>С РГС, КСБ, ММБ договариваемся о выделенном бизнес-партнёре с явным KPI на работу с нами.</div>
-      <div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5;background:rgba(34,197,94,.05);border-radius:5px;padding:6px 8px;margin-top:auto"><span style="color:#22C55E;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Эффект · </span>Из факультативного контрагента — в приоритет сегмента; клиенты приходят системно.</div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↑ растёт наполняемость</div>
+      </div>
     </div>
 
     <!-- 02: Встраиваемся в активности сегмента -->
-    <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
-        <div>
-          <div style="font-size:13px;color:rgba(34,197,94,.95);font-weight:800;letter-spacing:.04em;margin-bottom:4px">02 ·</div>
-          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.25">Встраиваемся в активности сегмента</div>
-        </div>
-        <div style="font-size:9px;color:#22C55E;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);border-radius:99px;padding:2px 7px;font-weight:600;white-space:nowrap;flex-shrink:0">↑ ↓</div>
+    <div style="display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:10px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px">
+      <div style="font-size:22px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">02</div>
+      <div>
+        <div style="font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Встраиваемся в активности сегмента</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.45">Бух-слёты в ММБ, акселераторы и хакатоны в КСБ, клиентские встречи в РГС — наш интерактив усиливает чужие форматы. <span style="color:rgba(255,255,255,.5)">Готовая воронка, не создаём ивент с нуля; Сбер уже платит за привлечение.</span></div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5"><span style="color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Суть · </span>Бух-слёты в ММБ, акселераторы и хакатоны в КСБ, клиентские встречи в РГС — наш интерактив усиливает чужие форматы.</div>
-      <div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5;background:rgba(34,197,94,.05);border-radius:5px;padding:6px 8px;margin-top:auto"><span style="color:#22C55E;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Эффект · </span>Готовая воронка, не создаём ивент с нуля; Сбер уже платит за привлечение.</div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↑ растёт наполняемость</div>
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↓ снижается стоимость</div>
+      </div>
     </div>
 
     <!-- 03: Консолидация ивент-бизнеса в СУ -->
-    <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
-        <div>
-          <div style="font-size:13px;color:rgba(34,197,94,.95);font-weight:800;letter-spacing:.04em;margin-bottom:4px">03 ·</div>
-          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.25">Консолидация ивент-бизнеса в СберУниверситете</div>
-        </div>
-        <div style="font-size:9px;color:#22C55E;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);border-radius:99px;padding:2px 7px;font-weight:600;white-space:nowrap;flex-shrink:0">↓ стоимость</div>
+    <div style="display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:10px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px">
+      <div style="font-size:22px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">03</div>
+      <div>
+        <div style="font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Консолидация ивент-бизнеса в СберУниверситете</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.45">Сами выводим закупку из маркетинга ПАО → закупаем на рынке быстрее и дешевле, без обременений банковских стандартов. <span style="color:rgba(255,255,255,.5)">Прямое снижение стоимости касания за счёт ухода от премии «работа с ПАО».</span></div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5"><span style="color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Суть · </span>Сами выводим закупку из маркетинга ПАО → закупаем на рынке быстрее и дешевле, без обременений банковских стандартов.</div>
-      <div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5;background:rgba(34,197,94,.05);border-radius:5px;padding:6px 8px;margin-top:auto"><span style="color:#22C55E;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Эффект · </span>Прямое снижение стоимости касания за счёт ухода от премии «работа с ПАО».</div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↓ снижается стоимость</div>
+      </div>
     </div>
 
     <!-- 04: Партнёры экосистемы как со-организаторы -->
-    <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
-        <div>
-          <div style="font-size:13px;color:rgba(34,197,94,.95);font-weight:800;letter-spacing:.04em;margin-bottom:4px">04 ·</div>
-          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.25">Партнёры экосистемы как со-организаторы</div>
-        </div>
-        <div style="font-size:9px;color:#22C55E;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);border-radius:99px;padding:2px 7px;font-weight:600;white-space:nowrap;flex-shrink:0">↑ ↓</div>
+    <div style="display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:10px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px">
+      <div style="font-size:22px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">04</div>
+      <div>
+        <div style="font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Партнёры экосистемы как со-организаторы</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.45">Cloud.ru, Эвотор, Салют для бизнеса, GigaChat — встраиваются по понятийному соглашению через роль Partner Integration. <span style="color:rgba(255,255,255,.5)">Чужие аудитории и маркетинговый бюджет партнёра → больше касаний дешевле.</span></div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5"><span style="color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Суть · </span>Cloud.ru, Эвотор, Салют для бизнеса, GigaChat — встраиваются по понятийному соглашению через роль Partner Integration.</div>
-      <div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5;background:rgba(34,197,94,.05);border-radius:5px;padding:6px 8px;margin-top:auto"><span style="color:#22C55E;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Эффект · </span>Чужие аудитории и маркетинговый бюджет партнёра → больше касаний дешевле.</div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↑ растёт наполняемость</div>
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↓ снижается стоимость</div>
+      </div>
     </div>
 
     <!-- 05: КМ-вход — дальше сами, через ИТ -->
-    <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
-        <div>
-          <div style="font-size:13px;color:rgba(34,197,94,.95);font-weight:800;letter-spacing:.04em;margin-bottom:4px">05 ·</div>
-          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.25">КМ-вход — дальше сами, через ИТ</div>
-        </div>
-        <div style="font-size:9px;color:#22C55E;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);border-radius:99px;padding:2px 7px;font-weight:600;white-space:nowrap;flex-shrink:0">↓ стоимость</div>
+    <div style="display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:10px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px">
+      <div style="font-size:22px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">05</div>
+      <div>
+        <div style="font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">КМ-вход — дальше сами, через ИТ</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.45">Q3 2026 — MVP собственного приложения. Q4 2026 — видимая ценность клиенту: само-регистрация, выбор мероприятий, навигация. <span style="color:rgba(255,255,255,.5)">Разгружаем перегруженный канал КМ; клиент сам формирует свою активность.</span></div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5"><span style="color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Суть · </span>Q3 2026 — MVP собственного приложения. Q4 2026 — видимая ценность клиенту: само-регистрация, выбор мероприятий, навигация.</div>
-      <div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5;background:rgba(34,197,94,.05);border-radius:5px;padding:6px 8px;margin-top:auto"><span style="color:#22C55E;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Эффект · </span>Разгружаем перегруженный канал КМ; клиент сам формирует свою активность.</div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↓ снижается стоимость</div>
+      </div>
     </div>
 
     <!-- 06: Кросс-треки между клубами -->
-    <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
-        <div>
-          <div style="font-size:13px;color:rgba(34,197,94,.95);font-weight:800;letter-spacing:.04em;margin-bottom:4px">06 ·</div>
-          <div style="font-size:16px;font-weight:700;color:#fff;line-height:1.25">Кросс-треки между клубами</div>
-        </div>
-        <div style="font-size:9px;color:#22C55E;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);border-radius:99px;padding:2px 7px;font-weight:600;white-space:nowrap;flex-shrink:0">↓ стоимость</div>
+    <div style="display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:10px 14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-left:3px solid #22C55E;border-radius:10px">
+      <div style="font-size:22px;font-weight:800;color:#22C55E;letter-spacing:-.02em;line-height:1">06</div>
+      <div>
+        <div style="font-size:14.5px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px">Кросс-треки между клубами</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.45">Онлайн-контент одного клуба переиспользуем для других сегментов и новых клубов. <span style="color:rgba(255,255,255,.5)">Снижаем cost-per-touch × количество клубов при тех же ресурсах.</span></div>
       </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5"><span style="color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Суть · </span>Онлайн-контент одного клуба переиспользуем для других сегментов и новых клубов.</div>
-      <div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5;background:rgba(34,197,94,.05);border-radius:5px;padding:6px 8px;margin-top:auto"><span style="color:#22C55E;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:9px">Эффект · </span>Снижаем cost-per-touch × количество клубов при тех же ресурсах.</div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <div style="font-size:10px;color:#22C55E;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:99px;padding:3px 9px;font-weight:700;white-space:nowrap">↓ снижается стоимость</div>
+      </div>
     </div>
 
   </div>
@@ -1042,12 +1082,12 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
         <div class="prog-name">Бизнес-клуб</div>
         <div class="prog-block">
           <div class="prog-bl-l">Ценность для клиента</div>
-          <div class="prog-bl-t">«Моё место» · регулярный ритм · <strong style="color:#22C55E;font-weight:700">NPS</strong></div>
+          <div class="prog-bl-t">«Моё место» · регулярный ритм · <span style="display:inline-block;font-size:11px;font-weight:800;color:#22C55E;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.45);border-radius:5px;padding:1px 6px;letter-spacing:.5px;vertical-align:baseline">NPS</span></div>
           <div style="font-size:10.5px;color:rgba(34,197,94,.9);margin-top:5px;letter-spacing:.1px"><span style="color:rgba(255,255,255,.4);font-weight:600">Связи · </span><strong style="color:#22C55E;font-weight:700">сильные</strong></div>
         </div>
         <div class="prog-block">
           <div class="prog-bl-l">Ценность для банка</div>
-          <div class="prog-bl-t"><strong style="color:#22C55E;font-weight:700">Лестница доверия</strong> · <strong style="color:#22C55E;font-weight:700">CLTV</strong></div>
+          <div class="prog-bl-t"><strong style="color:#fff;font-weight:700">Лестница доверия</strong> · <span style="display:inline-block;font-size:11px;font-weight:800;color:#22C55E;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.45);border-radius:5px;padding:1px 6px;letter-spacing:.5px;vertical-align:baseline">CLTV</span></div>
         </div>
         <div class="prog-block">
           <div class="prog-bl-l">Стоимость касания</div>
@@ -1065,7 +1105,7 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
       <div class="tline-labs">
         <span>Мероприятие</span>
         <span style="color:rgba(255,255,255,.55)">Серия · мы здесь</span>
-        <span class="g">Бизнес-клуб · цель 2026–28</span>
+        <span class="g">Цель 2028 · клубная среда для клиентов Сбера</span>
       </div>
     </div>
 
@@ -1133,12 +1173,12 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
         </div>
         <div style="flex:1;min-width:0">
           <div class="voc-tag" style="margin-bottom:5px;background:rgba(125,153,255,.1);border-color:rgba(125,153,255,.25);color:rgba(125,153,255,.95)">КСБ · CEO-клуб ДВ · команда</div>
-          <div class="voc-h">Юрий Владимиров <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0;display:block;margin-top:2px">бенефициар Эй-Пи Трейд · + 2 ком-директора в команде</span></div>
+          <div class="voc-h">Команда Эй-Пи Трейд <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0;display:block;margin-top:2px">бенефициар + 2 коммерческих директора</span></div>
         </div>
       </div>
       <div class="voc-quote" style="margin-top:0;min-height:132px;background:rgba(125,153,255,.06);border-left-color:rgba(125,153,255,.55);display:flex;flex-direction:column;align-items:flex-start">
         <div class="voc-quote-t" style="font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.5">«<strong>Тревога ушла</strong>. Здорово оказаться в <strong>среде равных</strong>. То, что слышим, <strong>вселяет уверенность</strong> — мы делаем правильные вещи, двигаемся абсолютно правильно, как и все здесь.»</div>
-        <div class="voc-quote-a">— Юрий Владимиров</div>
+        <div class="voc-quote-a">— Юрий Владимиров, бенефициар</div>
       </div>
       <div class="voc-row" style="margin-top:auto">
         <div class="voc-l" style="color:rgba(125,153,255,.85)">Голоса команды</div>
@@ -1199,8 +1239,8 @@ body{font-family:-apple-system,'SF Pro Display','Helvetica Neue',sans-serif;back
   </div>
 
   <!-- ROW 4: Вывод -->
-  <div style="margin-top:14px;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.22);border-radius:12px;padding:18px 22px;font-size:clamp(15px,1.5vw,18px);color:rgba(255,255,255,.92);line-height:1.45;font-weight:500">
-    <strong style="color:#fff;font-weight:700">Клиент уносит контакты, рост и инструменты.</strong> <span style="color:rgba(255,255,255,.75)">Возвращается, потому что видит ценность.</span>
+  <div style="margin-top:14px;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.22);border-radius:12px;padding:18px 22px;font-size:clamp(15px,1.5vw,18px);color:rgba(255,255,255,.85);line-height:1.5;font-weight:500">
+    Клиент уносит <strong style="color:#22C55E;font-weight:800">контакты, рост и инструменты</strong>. <span style="color:rgba(255,255,255,.65)">Возвращается, потому что видит ценность.</span>
   </div>
 </div>
 
