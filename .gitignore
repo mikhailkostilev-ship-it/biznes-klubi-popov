@@ -1,4 +1,5 @@
 v*.html
+!v2.html
 .DS_Store
 *.MOV
 img/ep_owner.jpg
